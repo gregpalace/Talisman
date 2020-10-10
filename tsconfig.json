@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "strict": true,
+      "outDir": "./build",
+      "sourceMap": true,
+      "module": "CommonJS",
+      "allowJs": true,
+      "target": "es5",
+      "jsx": "react",
+      "esModuleInterop": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+      "allowSyntheticDefaultImports": true,
+      "forceConsistentCasingInFileNames": true,
+      "resolveJsonModule": true
+    },
+    "include": ["./src/**/*"],
+    "exclude": ["/node_modules/"]
+}
