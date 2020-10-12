@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React unit tests <Map /> Should render correctly 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "black",
+      "border": "4px solid black",
+      "height": "400px",
+      "margin": "10px auto",
+      "width": "800px",
+    }
+  }
+/>
+`;

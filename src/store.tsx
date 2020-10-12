@@ -2,7 +2,6 @@ import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import playerReducer from './client/reducers/playerReducer';
 
-
 const store = createStore(
   playerReducer,
   composeWithDevTools(),

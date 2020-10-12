@@ -1,10 +1,11 @@
 import React from 'react';
-import Player from './client/components/player';
+
+import World from './client/components/World';
 
 const App = () => {
   return (
     <div>
-      <Player />
+      <World />
     </div>
   );
 }

@@ -28,9 +28,8 @@ module.exports = {
       {
         test: /\.(jpe?g|png|ttf|svg)$/,
         use: [
-          'file-loader',
           {
-            loader: 'image-webpack-loader',
+            loader: 'file-loader',
             options: {
               mozjpeg: {
                 quality: 10,

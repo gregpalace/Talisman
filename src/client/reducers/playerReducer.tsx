@@ -1,4 +1,5 @@
-import React from 'react';
+import * as types from '../constants/actionTypes';
+
 
 interface IPlayerState {
   readonly hp: number,
@@ -16,6 +17,11 @@ const playerState: IPlayerState = {
 
 const playerReducer = (state = playerState, action: any) => {
   switch(action.type) {
+    case types.MOVE_PLAYER:
+      console.log(action.payload)
+      return {
+        ...action.payload
+      }
     default:
       return state
   }
