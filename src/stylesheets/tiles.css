@@ -1,0 +1,16 @@
+.tile {
+  display: inline-flex;
+  background-color: green;
+}
+
+.rock {
+  background-color: '#eeee';
+}
+
+.tree {
+  background-color: '#fdfd';
+}
+
+.grass {
+  background-color: green;
+}

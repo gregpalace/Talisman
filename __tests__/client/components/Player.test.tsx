@@ -4,7 +4,6 @@ import toJson from 'enzyme-to-json';
 
 import Player from '../../../src/client/components/player';
 
-
 describe('React unit tests', () => {
   let wrapper: any;
 

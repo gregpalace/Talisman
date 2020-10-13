@@ -18,7 +18,6 @@ const playerState: IPlayerState = {
 const playerReducer = (state = playerState, action: any) => {
   switch(action.type) {
     case types.MOVE_PLAYER:
-      console.log(action.payload)
       return {
         ...action.payload
       }
