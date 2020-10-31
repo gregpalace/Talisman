@@ -1,6 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import MapRow from './MapRow';
+
+interface IMapState {
+  readonly tiles: any[];
+}
+
+const mapStateToProps = (state: IMapState) => {
+  return {
+    tiles: state.tiles,
+  };
+};
 
 const Map = (props: any) => {
   return (
@@ -20,4 +31,4 @@ const Map = (props: any) => {
   );
 };
 
-export default Map;
+export default connect(mapStateToProps)(Map);

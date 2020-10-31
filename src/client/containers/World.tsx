@@ -5,12 +5,13 @@ import { connect } from 'react-redux';
 import Map from '../components/Map';
 import Player from '../components/Player';
 import { tiles } from '../../data/maps/1/map1';
+import store from '../../store';
 
 interface IPlayerState {
-  readonly hp: number,
-  readonly mp: number,
-  readonly position: number[],
-  readonly inventorySlots: number,
+  readonly hp: number;
+  readonly mp: number;
+  readonly position: number[];
+  readonly inventorySlots: number;
 }
 
 const mapStateToProps = (state: IPlayerState) => ({
@@ -18,6 +19,12 @@ const mapStateToProps = (state: IPlayerState) => ({
 });
 
 const World = (props: any) => {
+  store.dispatch({
+    type: 'ADD_TILES',
+    payload: {
+      tiles,
+    },
+  });
   return (
     <div
       style={{
@@ -27,7 +34,7 @@ const World = (props: any) => {
         margin: '20px auto',
       }}
     >
-      <Map tiles={tiles} />
+      <Map />
       <Player />
     </div>
   );

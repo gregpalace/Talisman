@@ -1,10 +1,10 @@
 import * as types from '../constants/actionTypes';
 
 interface IPlayerState {
-  readonly hp: number,
-  readonly mp: number,
-  readonly position: number[],
-  readonly inventorySlots: number,
+  readonly hp: number;
+  readonly mp: number;
+  readonly position: number[];
+  readonly inventorySlots: number;
 }
 
 const playerState: IPlayerState = {
