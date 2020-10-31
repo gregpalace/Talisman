@@ -1,6 +1,6 @@
 import React from 'react';
 
-import World from './client/components/World';
+import World from './client/containers/World';
 
 const App = () => {
   return (
@@ -8,6 +8,6 @@ const App = () => {
       <World />
     </div>
   );
-}
+};
 
 export default App;

@@ -5,29 +5,29 @@ import '../../stylesheets/tiles.css';
 
 const MapTile = (props: any) => {
   const getTileSprite = (type: number | null) => {
-    switch(type) {
+    switch (type) {
       case 0:
-        return 'grass'
+        return 'grass';
       case 1:
-        return 'tree'
+        return 'tree';
       case 5:
-        return 'rock'
+        return 'rock';
       default:
-        return null
+        return null;
     }
-  }
-  
+  };
+
   return (
-  <div 
-    className={`tile ${getTileSprite(props.tile)}`}
-    style={{
-      height: SPRITE_SIZE,
-      width: SPRITE_SIZE,
-    }} 
-  >
-    {props.tile}
-  </div>
+    <div
+      className={`tile ${getTileSprite(props.tile)}`}
+      style={{
+        height: SPRITE_SIZE,
+        width: SPRITE_SIZE,
+      }}
+    >
+      {props.tile}
+    </div>
   );
-}
+};
 
 export default MapTile;

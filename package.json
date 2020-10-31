@@ -10,8 +10,8 @@
     "test-coverage": "jest --coverage --verbose",
     "test-update-snapshot": "jest --updateSnapshot",
     "test:app": "jest --runInBand --detectOpenHandles ./__tests__/client/*",
-    "build": "webpack",
-    "start": "webpack-dev-server"
+    "build": "NODE_ENV=production webpack",
+    "dev": "NODE_ENV=development webpack-dev-server --hot"
   },
   "repository": {
     "type": "git",

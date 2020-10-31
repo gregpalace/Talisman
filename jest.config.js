@@ -7,12 +7,10 @@ module.exports = {
     '**/__tests__/**/*.+(ts|tsx|js)',
     '**/?(*.)+(spec|test).+(ts|tsx|js)',
   ],
-  "coveragePathIgnorePatterns": [
-    "<rootDir>/node_modules/"
-  ],
-  "testPathIgnorePatterns": [
-    "<rootDir>/client/assets/",
-    "<rootDir>/__tests__/setup/",
+  coveragePathIgnorePatterns: ['<rootDir>/node_modules/'],
+  testPathIgnorePatterns: [
+    '<rootDir>/client/assets/',
+    '<rootDir>/__tests__/setup/',
   ],
   transform: {
     '^.+\\.tsx?$': 'ts-jest',

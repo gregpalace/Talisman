@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: process.env.NODE_ENV,
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -43,6 +44,7 @@ module.exports = {
   },
   mode: 'development',
   devServer: {
+    // publicPath: '/dist/',
     hot: true,
     historyApiFallback: true,
     contentBase: path.join(__dirname, 'src'),
