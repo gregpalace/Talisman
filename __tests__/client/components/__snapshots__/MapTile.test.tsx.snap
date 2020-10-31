@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React unit tests <MapRow /> Should render correctly 1`] = `
+<div
+  className="tile null"
+  style={
+    Object {
+      "height": 50,
+      "width": 50,
+    }
+  }
+/>
+`;
