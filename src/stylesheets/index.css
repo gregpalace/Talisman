@@ -2,5 +2,6 @@ body {
   margin: 0;
   padding: '0 auto';
   font-family: 'Courier New', Courier, monospace;
+  border: 1px solid red;
   background-color: black;
 }

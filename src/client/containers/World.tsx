@@ -1,22 +1,35 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import * as actions from '../actions/actions';
 
 import Map from '../components/Map';
 import Player from '../components/Player';
 import { tiles } from '../../data/maps/1/map1';
 import store from '../../store';
 
+interface IState {
+  readonly map: IMapState;
+  readonly player: IPlayerState;
+}
+
+interface IMapState {
+  readonly tiles: number[];
+}
 interface IPlayerState {
   readonly hp: number;
   readonly mp: number;
-  readonly position: number[];
   readonly inventorySlots: number;
+  readonly position: number[];
+  readonly direction: string;
+  readonly spritePosition: string;
+  readonly walkIndex: number;
 }
 
-const mapStateToProps = (state: IPlayerState) => ({
-  position: state.position,
-});
+const mapStateToProps = (state: IState) => {
+  return {
+    position: state.player.position,
+    tiles: state.map.tiles,
+  };
+};
 
 const World = (props: any) => {
   store.dispatch({

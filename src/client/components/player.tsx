@@ -9,10 +9,10 @@ const Player = (props: any) => {
     <div
       style={{
         position: 'absolute',
-        top: props.position[0],
-        left: props.position[1],
+        top: props.player.position[0],
+        left: props.player.position[1],
         backgroundImage: `url('${walkSprite}')`,
-        backgroundPosition: props.spritePosition,
+        backgroundPosition: props.player.spriteLocation,
         width: '50px',
         height: '50px',
       }}

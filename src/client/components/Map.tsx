@@ -4,12 +4,27 @@ import { connect } from 'react-redux';
 import MapRow from './MapRow';
 
 interface IMapState {
-  readonly tiles: any[];
+  readonly map: IMapState;
+  readonly player: IPlayerState;
+}
+
+interface IPlayerState {
+  readonly hp: number;
+  readonly mp: number;
+  readonly inventorySlots: number;
+  readonly position: number[];
+  readonly direction: string;
+  readonly spritePosition: string;
+  readonly walkIndex: number;
+}
+
+interface IMapState {
+  readonly tiles: number[];
 }
 
 const mapStateToProps = (state: IMapState) => {
   return {
-    tiles: state.tiles,
+    tiles: state.map.tiles,
   };
 };
 
@@ -19,7 +34,7 @@ const Map = (props: any) => {
       style={{
         width: '1000px',
         height: '500px',
-        backgroundColor: 'black',
+        backgroundColor: 'green',
         border: '4px solid black',
         margin: '10px auto',
       }}
