@@ -1,0 +1,38 @@
+$modalBackground: #ddd;
+$borderProperties: 2px outset rgba(0, 0, 0, 0.313);
+
+li {
+  list-style: none;
+  margin: 5px;
+}
+
+#player-inventory {
+  position: absolute;
+  left: 15rem;
+  top: 10rem;
+  width: 50vw;
+  border: $borderProperties;
+  background-color: $modalBackground;
+}
+
+#inventory-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  .items {
+    flex-wrap: wrap;
+    align-content: flex-end;
+    border: $borderProperties;
+  }
+}
+
+#items-table {
+  border-left: thick solid rgba(0, 0, 0, 0.313);
+}
+
+.inventory-slots {
+  height: 5%;
+  .slots {
+    text-align: right;
+  }
+}

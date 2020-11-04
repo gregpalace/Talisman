@@ -1,4 +1,4 @@
-import React, { Dispatch } from 'react';
+import React, { Dispatch, useState } from 'react';
 import { connect } from 'react-redux';
 
 import Map from '../components/Map';
