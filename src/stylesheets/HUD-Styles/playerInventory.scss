@@ -19,6 +19,7 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  height: inherit;
   .items {
     flex-wrap: wrap;
     align-content: flex-end;

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import Map from '../components/Map';
 import Player from '../components/Player';
+import HealthBar from '../components/hud/healthBar';
 import { tiles } from '../../data/maps/1/map1';
 import store from '../../store';
 
@@ -28,6 +29,7 @@ const mapStateToProps = (state: IState) => {
   return {
     position: state.player.position,
     tiles: state.map.tiles,
+    percentage: state.player.hp,
   };
 };
 
@@ -37,7 +39,7 @@ interface IWorldProps {
   tiles: number[];
 }
 
-const World: React.FC<IWorldProps> = () => {
+const World: React.FC<IWorldProps> = (props: any) => {
   store.dispatch({
     type: 'ADD_TILES',
     payload: {
@@ -55,6 +57,7 @@ const World: React.FC<IWorldProps> = () => {
     >
       <Map />
       <Player />
+      <HealthBar percentage={props.percentage} />
     </div>
   );
 };
