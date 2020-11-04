@@ -2,10 +2,14 @@ import React from 'react';
 
 import MapTile from './MapTile';
 
-const MapRow = (props: any) => {
+interface IMapRow {
+  tiles: number[];
+}
+
+const MapRow: React.FC<IMapRow> = (props) => {
   return (
     <div className='rows'>
-      {props.tiles.map((tile: any, index: number) => (
+      {props.tiles.map((tile: number, index: number) => (
         <MapTile key={index} tile={tile} />
       ))}
     </div>

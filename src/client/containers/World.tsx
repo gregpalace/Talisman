@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Dispatch } from 'react';
 import { connect } from 'react-redux';
 
 import Map from '../components/Map';
@@ -31,7 +31,13 @@ const mapStateToProps = (state: IState) => {
   };
 };
 
-const World = (props: any) => {
+interface IWorldProps {
+  dispatch: Dispatch<any>;
+  position: number[];
+  tiles: number[];
+}
+
+const World: React.FC<IWorldProps> = () => {
   store.dispatch({
     type: 'ADD_TILES',
     payload: {

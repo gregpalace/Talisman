@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Dispatch } from 'react';
 import { connect } from 'react-redux';
 
 import MapRow from './MapRow';
@@ -22,13 +22,17 @@ interface IMapState {
   readonly tiles: number[];
 }
 
+interface IMapProps {
+  dispatch: Dispatch<any>;
+  tiles: any[];
+}
+
 const mapStateToProps = (state: IMapState) => {
   return {
     tiles: state.map.tiles,
   };
 };
-
-const Map = (props: any) => {
+const Map: React.FC<IMapProps> = (props) => {
   return (
     <div
       style={{
@@ -39,7 +43,7 @@ const Map = (props: any) => {
         margin: '10px auto',
       }}
     >
-      {props.tiles.map((row: any, index: number) => (
+      {props.tiles.map((row: number[], index: number) => (
         <MapRow key={index} tiles={row} />
       ))}
     </div>

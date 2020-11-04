@@ -3,7 +3,11 @@ import React from 'react';
 import { SPRITE_SIZE } from '../constants/actionTypes';
 import '../../stylesheets/tiles.css';
 
-const MapTile = (props: any) => {
+interface IMapTile {
+  tile: number;
+}
+
+const MapTile: React.FC<IMapTile> = (props) => {
   const getTileSprite = (type: number | null) => {
     switch (type) {
       case 0:
