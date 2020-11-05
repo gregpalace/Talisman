@@ -2,17 +2,21 @@ import React from 'react';
 
 import '../../../stylesheets/HUD-Styles/playerInventory.scss';
 
-const Inventory = (props: any) => {
+interface IInventory {
+  hp: number;
+  mp: number;
+  inventorySlots: number;
+}
+
+const Inventory = (props: IInventory) => {
   return (
     <div id='player-inventory'>
       <main id='player-stats'>
         <table id='player-table'>
           <thead>Player Stats:</thead>
-          <ul>
-            <li>Level: 5</li>
-            <li>HP: {props.hp}</li>
-            <li>MP: {props.mp}</li>
-          </ul>
+          <td>Level: 5</td>
+          <td>HP: {props.hp}</td>
+          <td>MP: {props.mp}</td>
         </table>
       </main>
       <aside id='inventory-items'>

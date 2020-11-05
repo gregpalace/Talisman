@@ -26,6 +26,12 @@ const playerReducer = (state = playerState, action: any) => {
       return {
         ...action.payload,
       };
+    case types.TAKE_DAMAGE:
+      const updatedHP = state.hp - 10;
+      return {
+        ...state,
+        hp: updatedHP,
+      };
     default:
       return state;
   }

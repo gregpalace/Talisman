@@ -1,10 +1,12 @@
 import React, { Dispatch, useState } from 'react';
 import { connect } from 'react-redux';
 
+import * as actions from '../actions/actions';
+
 import Map from '../components/Map';
 import Player from '../components/Player';
 import HealthBar from '../components/hud/healthBar';
-import { tiles } from '../../data/maps/1/map1';
+// import { tiles } from '../../data/maps/1/map1';
 import store from '../../store';
 
 interface IState {
@@ -25,27 +27,24 @@ interface IPlayerState {
   readonly walkIndex: number;
 }
 
-const mapStateToProps = (state: IState) => {
-  return {
-    position: state.player.position,
-    tiles: state.map.tiles,
-    percentage: state.player.hp,
-  };
-};
+const mapStateToProps = (state: IState) => ({
+  position: state.player.position,
+  tiles: state.map.tiles,
+  percentage: state.player.hp,
+});
+
+const mapDispatchToProps = (dispatch: any) => ({
+  takeDamage: () => dispatch(actions.takeDamage()),
+});
 
 interface IWorldProps {
-  dispatch: Dispatch<any>;
   position: number[];
   tiles: number[];
+  percentage: number;
+  takeDamage: any;
 }
 
-const World: React.FC<IWorldProps> = (props: any) => {
-  store.dispatch({
-    type: 'ADD_TILES',
-    payload: {
-      tiles,
-    },
-  });
+const World = (props: IWorldProps) => {
   return (
     <div
       style={{
@@ -62,4 +61,4 @@ const World: React.FC<IWorldProps> = (props: any) => {
   );
 };
 
-export default connect(mapStateToProps)(World);
+export default connect(mapStateToProps, mapDispatchToProps)(World);

@@ -5,31 +5,31 @@ import Inventory from '../components/hud/playerInventory';
 import handleMovement from './handleMovement';
 import walkSprite from '../../assets/walkSprite.png';
 
-interface IState {
-  readonly map: IMapState;
-  readonly player: IPlayerState;
-}
+// interface IState {
+//   readonly map: IMapState;
+//   readonly player: IPlayerState;
+// }
 
-interface IMapState {
-  readonly tiles: number[];
-}
-interface IPlayerState {
-  readonly hp: number;
-  readonly mp: number;
-  readonly inventorySlots: number;
-  readonly position: number[];
-  readonly direction: string;
-  readonly spritePosition: string;
-  readonly walkIndex: number;
-}
+// interface IMapState {
+//   readonly tiles: number[];
+// }
+// interface IPlayerState {
+//   readonly hp: number;
+//   readonly mp: number;
+//   readonly inventorySlots: number;
+//   readonly position: number[];
+//   readonly direction: string;
+//   readonly spritePosition: string;
+//   readonly walkIndex: number;
+// }
 
-const mapStateToProps = (state: IState) => {
+const mapStateToProps = (state: any) => {
   return {
     ...state,
   };
 };
 
-const Player: React.FC<IState> = (props) => {
+const Player = (props: any) => {
   const [inventoryOpen, setInventoryOpen] = useState(false);
   const showInventory = () => {
     setInventoryOpen(!inventoryOpen);
@@ -59,3 +59,4 @@ const Player: React.FC<IState> = (props) => {
 };
 
 export default connect(mapStateToProps)(handleMovement(Player));
+// export default Player;
