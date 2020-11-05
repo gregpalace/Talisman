@@ -6,7 +6,7 @@ import * as actions from '../actions/actions';
 import Map from '../components/Map';
 import Player from '../components/Player';
 import HealthBar from '../components/hud/healthBar';
-// import { tiles } from '../../data/maps/1/map1';
+import { tiles } from '../../data/maps/1/map1';
 import store from '../../store';
 
 interface IState {
@@ -45,6 +45,12 @@ interface IWorldProps {
 }
 
 const World = (props: IWorldProps) => {
+  store.dispatch({
+    type: 'ADD_TILES',
+    payload: {
+      tiles,
+    },
+  });
   return (
     <div
       style={{
