@@ -22,13 +22,13 @@ export default function handleMovement(player: any) {
   function getSpriteLocation(direction: string | null, walkIndex: number) {
     switch (direction) {
       case 'EAST':
-        return `${SPRITE_SIZE * walkIndex}px ${SPRITE_SIZE * 0}px`;
-      case 'SOUTH':
         return `${SPRITE_SIZE * walkIndex}px ${SPRITE_SIZE * 1}px`;
-      case 'WEST':
+      case 'SOUTH':
         return `${SPRITE_SIZE * walkIndex}px ${SPRITE_SIZE * 2}px`;
-      case 'NORTH':
+      case 'WEST':
         return `${SPRITE_SIZE * walkIndex}px ${SPRITE_SIZE * 3}px`;
+      case 'NORTH':
+        return `${SPRITE_SIZE * walkIndex}px ${SPRITE_SIZE * 4}px`;
       default:
         return null;
     }
@@ -36,7 +36,7 @@ export default function handleMovement(player: any) {
 
   function getWalkIndex() {
     const walkIndex = store.getState().player.walkIndex;
-    return walkIndex >= 9 ? 0 : walkIndex + 1;
+    return walkIndex >= 8 ? 0 : walkIndex + 1;
   }
 
   function observeBoundaries(oldPos: any, newPos: number[] | any) {
@@ -98,7 +98,7 @@ export default function handleMovement(player: any) {
     }
   }
 
-  window.addEventListener('keydown', (e: any) => {
+  window.addEventListener('keydown', (e: Event) => {
     handleKeyDown(e);
   });
 

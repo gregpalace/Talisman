@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SPRITE_SIZE } from '../constants/actionTypes';
-import '../../stylesheets/tiles.css';
+import '../../stylesheets/tiles.scss';
 
 interface IMapTile {
   tile: number;

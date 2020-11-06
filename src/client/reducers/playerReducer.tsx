@@ -14,8 +14,8 @@ const playerState: IPlayerState = {
   hp: 100,
   mp: 150,
   position: [0, 0],
-  spritePosition: '0px 0px',
-  direction: 'east',
+  spritePosition: '0px 50px',
+  direction: 'EAST',
   walkIndex: 0,
   inventorySlots: 10,
 };

@@ -1,3 +1,4 @@
+import { relative } from 'path';
 import React, { Dispatch } from 'react';
 import { connect } from 'react-redux';
 
@@ -36,10 +37,13 @@ const Map: React.FC<IMapProps> = (props) => {
   return (
     <div
       style={{
-        width: '1000px',
-        height: '500px',
+        // position: 'relative',
+        top: '0px',
+        left: '0px',
+        width: '1000px', // 800
+        height: '500px', // 480
         backgroundColor: 'green',
-        border: '4px solid black',
+        border: '4px solid white',
         margin: '10px auto',
       }}
     >
