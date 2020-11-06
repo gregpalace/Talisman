@@ -1,15 +1,21 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import World from './client/containers/World';
+import Viewport from './client/components/hud/ViewPort';
 
 import '../src/stylesheets/index.scss';
 
-const App = () => {
+const App = ({ appState }: any) => {
   return (
     <div>
-      <World />
+      <Viewport>
+        <World />
+      </Viewport>
     </div>
   );
 };
 
-export default App;
+const mapStateToProps = ({ appState }: any) => ({ appState });
+
+export default connect(mapStateToProps)(App);

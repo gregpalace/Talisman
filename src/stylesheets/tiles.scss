@@ -1,10 +1,10 @@
 .tile {
   display: inline-flex;
-  background-color: green;
+  // background-color: green;
 }
 
 .rock {
-  background-color: red;
+  background-color: url('/src/assets/tiles/brick-wall-2.png');
 }
 
 .tree {
@@ -12,5 +12,6 @@
 }
 
 .grass {
-  background-color: green;
+  background-image: url('/src/assets/tiles/brick-wall-1.png');
+  background-repeat: no-repeat;
 }
