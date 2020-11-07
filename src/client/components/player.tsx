@@ -1,27 +1,10 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import { IState } from '../../typings/PlayerTypes';
 
 import Inventory from '../components/hud/playerInventory';
 import handleMovement from './handleMovement';
 import walkSprite from '../../assets/walkSprite.png';
-
-interface IState {
-  readonly map: IMapState;
-  readonly player: IPlayerState;
-}
-
-interface IMapState {
-  readonly tiles: number[];
-}
-interface IPlayerState {
-  readonly hp: number;
-  readonly mp: number;
-  readonly inventorySlots: number;
-  readonly position: number[];
-  readonly direction: string;
-  readonly spritePosition: string;
-  readonly walkIndex: number;
-}
 
 const mapStateToProps = (state: IState) => {
   return {
@@ -59,4 +42,3 @@ const Player = (props: any) => {
 };
 
 export default connect(mapStateToProps)(handleMovement(Player));
-// export default Player;

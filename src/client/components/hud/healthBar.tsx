@@ -1,12 +1,9 @@
 import React from 'react';
 
 import Filler from './Filler';
+import { IHealth } from '../../../typings/HUDTypes';
 
 import '../../../stylesheets/HUD-Styles/healthBar.scss';
-
-interface IHealth {
-  percentage: number | null;
-}
 
 const HealthBar = (props: IHealth) => {
   return (

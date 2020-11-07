@@ -3,29 +3,12 @@ import { connect } from 'react-redux';
 
 import * as actions from '../actions/actions';
 
+import { IState } from '../../typings/PlayerTypes';
 import Map from '../components/Map';
 import Player from '../components/Player';
 import HealthBar from '../components/hud/healthBar';
 import { tiles } from '../../data/maps/1/map1';
 import store from '../../store';
-
-interface IState {
-  readonly map: IMapState;
-  readonly player: IPlayerState;
-}
-
-interface IMapState {
-  readonly tiles: number[];
-}
-interface IPlayerState {
-  readonly hp: number;
-  readonly mp: number;
-  readonly inventorySlots: number;
-  readonly position: number[];
-  readonly direction: string;
-  readonly spritePosition: string;
-  readonly walkIndex: number;
-}
 
 const mapStateToProps = (state: IState) => ({
   position: state.player.position,

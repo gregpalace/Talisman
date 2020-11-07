@@ -1,20 +1,12 @@
 import * as types from '../constants/actionTypes';
 
-interface IPlayerState {
-  readonly hp: number;
-  readonly mp: number;
-  readonly position: number[];
-  readonly spritePosition: string;
-  readonly direction: string;
-  readonly walkIndex: number;
-  readonly inventorySlots: number;
-}
+import { IPlayerState } from '../../typings/ReducerTypes';
 
 const playerState: IPlayerState = {
   hp: 100,
   mp: 150,
   position: [0, 0],
-  spritePosition: '0px 50px',
+  spritePosition: '0px 0px',
   direction: 'EAST',
   walkIndex: 0,
   inventorySlots: 10,

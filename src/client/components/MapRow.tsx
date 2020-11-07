@@ -1,10 +1,7 @@
 import React from 'react';
 
 import MapTile from './MapTile';
-
-interface IMapRow {
-  tiles: number[];
-}
+import { IMapRow } from '../../typings/MapTypes';
 
 const MapRow: React.FC<IMapRow> = (props) => {
   return (

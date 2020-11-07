@@ -2,11 +2,7 @@ import React from 'react';
 
 import '../../../stylesheets/HUD-Styles/playerInventory.scss';
 
-interface IInventory {
-  hp: number;
-  mp: number;
-  inventorySlots: number;
-}
+import { IInventory } from '../../../typings/HUDTypes';
 
 const Inventory = (props: IInventory) => {
   return (

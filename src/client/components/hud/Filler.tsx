@@ -1,8 +1,6 @@
 import React from 'react';
 
-interface IFiller {
-  percentage: number | null;
-}
+import { IFiller } from '../../../typings/HUDTypes';
 
 const Filler = (props: IFiller) => {
   return <div className='filler' style={{ width: `${props.percentage}%` }} />;

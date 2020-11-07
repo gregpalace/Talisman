@@ -1,11 +1,9 @@
 import React from 'react';
 
 import { SPRITE_SIZE } from '../constants/actionTypes';
-import '../../stylesheets/tiles.scss';
+import { IMapTile } from '../../typings/MapTypes';
 
-interface IMapTile {
-  tile: number;
-}
+import '../../stylesheets/tiles.scss';
 
 const MapTile: React.FC<IMapTile> = (props) => {
   const getTileSprite = (type: number | null) => {

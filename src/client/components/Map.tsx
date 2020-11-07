@@ -37,7 +37,7 @@ const Map: React.FC<IMapProps> = (props) => {
   return (
     <div
       style={{
-        // position: 'relative',
+        position: 'relative',
         top: '0px',
         left: '0px',
         width: '1000px', // 800
