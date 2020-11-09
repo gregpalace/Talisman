@@ -9,7 +9,7 @@ const playerState: IPlayerState = {
   spritePosition: '0px 0px',
   direction: 'EAST',
   walkIndex: 0,
-  inventorySlots: 10,
+  inventorySlots: 6,
 };
 
 const playerReducer = (state = playerState, action: any) => {

@@ -8,32 +8,30 @@ li {
 
 #player-inventory {
   position: absolute;
-  left: 15rem;
+  z-index: 2;
   top: 10rem;
-  width: 50vw;
+  width: 40vw;
   border: $borderProperties;
   background-color: $modalBackground;
 }
 
 #inventory-items {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-end;
-  height: inherit;
+  border-left: thick solid rgba(0, 0, 0, 0.313);
   .items {
-    flex-wrap: wrap;
-    align-content: flex-end;
+    margin-right: 5px;
     border: $borderProperties;
   }
 }
 
-#items-table {
-  border-left: thick solid rgba(0, 0, 0, 0.313);
-}
-
 .inventory-slots {
-  height: 5%;
+  height: 2%;
   .slots {
+    font-family: 'Courier New', Courier, monospace;
+    font-style: oblique;
+    margin-right: 5px;
     text-align: right;
   }
 }

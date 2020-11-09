@@ -6,3 +6,6 @@ export const MAP_WIDTH = SPRITE_SIZE * 10;
 export const MAP_HEIGHT = SPRITE_SIZE * 20;
 export const GAME_VIEWPORT_SIZE = 350;
 export const GAME_VIEWPORT_SIZE_LG = 400;
+export const INVENTORY_SLOTS = 6;
+export const MAX_HP = 100;
+export const MAX_MP = 100;

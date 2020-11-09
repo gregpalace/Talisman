@@ -1,28 +1,37 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import EmptySlot from './emptySlot';
+
+import { IInventory } from '../../../typings/HUDTypes';
+import * as types from '../../constants/actionTypes';
 
 import '../../../stylesheets/HUD-Styles/playerInventory.scss';
 
-import { IInventory } from '../../../typings/HUDTypes';
-
 const Inventory = (props: IInventory) => {
+  const slots = new Array(types.INVENTORY_SLOTS).fill(null);
+
+  const itemSlots = slots.map((el) => {
+    el === null;
+  });
+
   return (
     <div id='player-inventory'>
-      <main id='player-stats'>
-        <table id='player-table'>
-          <thead>Player Stats:</thead>
-          <td>Level: 5</td>
-          <td>HP: {props.hp}</td>
-          <td>MP: {props.mp}</td>
-        </table>
-      </main>
+      <ul id='player-table'>
+        <li>Level: 5</li>
+        <li>HP: {props.hp}</li>
+        <li>MP: {props.mp}</li>
+      </ul>
       <aside id='inventory-items'>
-        <table id='items-table'>
-          <thead>Items:</thead>
-          <tr>Consumables</tr>
-          <td className='items'>Potion x2</td>
-          <td className='items'>Hi-Potion x3</td>
-          <td className='items'>Rare Candy x3</td>
-        </table>
+        <section className='items'>
+          <EmptySlot>{itemSlots[0]}</EmptySlot>
+          <EmptySlot>{itemSlots[1]}</EmptySlot>
+          <EmptySlot>{itemSlots[2]}</EmptySlot>
+        </section>
+        <section className='items'>
+          <EmptySlot>{itemSlots[4]}</EmptySlot>
+          <EmptySlot>{itemSlots[5]}</EmptySlot>
+          <EmptySlot>{itemSlots[6]}</EmptySlot>
+        </section>
       </aside>
       <hr />
       <footer className='inventory-slots'>

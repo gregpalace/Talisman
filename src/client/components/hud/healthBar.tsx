@@ -8,7 +8,7 @@ import '../../../stylesheets/HUD-Styles/healthBar.scss';
 const HealthBar = (props: IHealth) => {
   return (
     <div className='health-bar'>
-      <Filler percentage={props.percentage} />
+      <Filler hp={props.hp} percentage={props.percentage} />
     </div>
   );
 };

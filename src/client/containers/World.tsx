@@ -12,6 +12,7 @@ import store from '../../store';
 
 const mapStateToProps = (state: IState) => ({
   position: state.player.position,
+  hp: state.player.hp,
   tiles: state.map.tiles,
   percentage: state.player.hp,
 });
@@ -24,6 +25,7 @@ interface IWorldProps {
   position: number[];
   tiles: number[];
   percentage: number;
+  hp: number;
   takeDamage: any;
 }
 
@@ -45,7 +47,7 @@ const World = (props: IWorldProps) => {
     >
       <Map />
       <Player />
-      <HealthBar percentage={props.percentage} />
+      <HealthBar hp={props.hp} percentage={props.percentage} />
     </div>
   );
 };

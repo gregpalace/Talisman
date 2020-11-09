@@ -5,3 +5,14 @@
 //   border: 1px solid red;
 //   background-color: #dddd;
 // }
+body {
+  margin: 0;
+  background-color: var(--dark-gray);
+  /* default text color */
+  color: var(--gray);
+  /* default font */
+  font-family: Montserrat, Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+}

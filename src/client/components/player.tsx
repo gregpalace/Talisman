@@ -29,7 +29,7 @@ const Player = (props: any) => {
         height: '50px',
       }}
     >
-      {/* <button onClick={showInventory}>Click</button> */}
+      <button onClick={showInventory}>Click</button>
       {inventoryOpen ? (
         <Inventory
           hp={props.player.hp}
