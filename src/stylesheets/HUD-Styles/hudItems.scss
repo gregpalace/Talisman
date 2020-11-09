@@ -1,5 +1,21 @@
+$inventoryBorder: 1px outset black;
+$inventoryBorderRadius: 10px;
+
 #hud-items {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
+  #inventory-button {
+    width: 25%;
+    font-style: oblique;
+    outline: none;
+    background-color: transparent;
+    border: $inventoryBorder;
+    border-radius: $inventoryBorderRadius;
+    &:hover {
+      color: white;
+      background-color: gray;
+    }
+  }
 }

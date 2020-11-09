@@ -1,25 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
 import HealthBar from '../components/hud/healthBar';
 import MagicBar from '../components/hud/magicBar';
+import Inventory from '../components/hud/Inventory';
 
 import '../../stylesheets/HUD-Styles/hudItems.scss';
 import { IState } from '../../typings/PlayerTypes';
 
 const mapStateToProps = (state: IState) => ({
-  position: state.player.position,
   hp: state.player.hp,
   mp: state.player.mp,
-  tiles: state.map.tiles,
   percentage: state.player.hp,
+  inventorySlots: state.player.inventorySlots,
 });
 
-const HudItems = (props: any) => {
+const HudItems = ({ hp, mp, inventorySlots, percentage }: any) => {
+  const [inventoryOpen, setInventoryOpen] = useState(false);
+  const showInventory = () => {
+    setInventoryOpen(!inventoryOpen);
+  };
   return (
     <div id='hud-items'>
-      <HealthBar hp={props.hp} percentage={props.percentage} />
-      <MagicBar mp={props.mp} percentage={props.percentage} />
+      <HealthBar hp={hp} percentage={percentage} />
+      <MagicBar mp={mp} percentage={percentage} />
+      {inventoryOpen ? (
+        <Inventory hp={hp} mp={mp} inventorySlots={inventorySlots} />
+      ) : null}
+      <button id='inventory-button' onClick={showInventory}>
+        Show Inventory
+      </button>
     </div>
   );
 };

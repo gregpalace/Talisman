@@ -33,7 +33,7 @@ const mapStateToProps = (state: IMapState) => {
     tiles: state.map.tiles,
   };
 };
-const Map: React.FC<IMapProps> = (props) => {
+const Map: React.FC<IMapProps> = ({ tiles }) => {
   return (
     <div
       style={{
@@ -47,7 +47,7 @@ const Map: React.FC<IMapProps> = (props) => {
         margin: '10px auto',
       }}
     >
-      {props.tiles.map((row: number[], index: number) => (
+      {tiles.map((row: number[], index: number) => (
         <MapRow key={index} tiles={row} />
       ))}
     </div>

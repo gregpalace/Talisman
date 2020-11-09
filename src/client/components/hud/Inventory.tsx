@@ -7,9 +7,8 @@ import * as types from '../../constants/actionTypes';
 
 import '../../../stylesheets/HUD-Styles/playerInventory.scss';
 
-const Inventory = (props: IInventory) => {
+const Inventory = ({ hp, mp, inventorySlots }: IInventory) => {
   const slots = new Array(types.INVENTORY_SLOTS).fill(null);
-
   const itemSlots = slots.map((el) => {
     el === null;
   });
@@ -18,8 +17,8 @@ const Inventory = (props: IInventory) => {
     <div id='player-inventory'>
       <ul id='player-table'>
         <li>Level: 5</li>
-        <li>HP: {props.hp}</li>
-        <li>MP: {props.mp}</li>
+        <li>HP: {hp}</li>
+        <li>MP: {mp}</li>
       </ul>
       <aside id='inventory-items'>
         <section className='items'>
@@ -35,7 +34,7 @@ const Inventory = (props: IInventory) => {
       </aside>
       <hr />
       <footer className='inventory-slots'>
-        <h4 className='slots'>Slots Available: {props.inventorySlots}</h4>
+        <h4 className='slots'>Slots Available: {inventorySlots}</h4>
       </footer>
     </div>
   );

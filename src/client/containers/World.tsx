@@ -5,7 +5,6 @@ import * as actions from '../actions/actions';
 
 import Map from '../components/Map';
 import Player from '../components/Player';
-import HealthBar from '../components/hud/healthBar';
 import HudItems from '../containers/HudItems';
 import { tiles } from '../../data/maps/1/map1';
 import store from '../../store';
