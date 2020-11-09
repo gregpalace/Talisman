@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React unit tests <HudItems /> should render correclty 1`] = `
+<div
+  id="hud-items"
+>
+  <HealthBar />
+  <MagicBar />
+  <button
+    id="inventory-button"
+    onClick={[Function]}
+  >
+    Show Inventory
+  </button>
+</div>
+`;

@@ -8,6 +8,7 @@ describe('React unit tests', () => {
   let wrapper: any;
 
   const props = {
+    hp: 100,
     percentage: 50,
   };
   beforeAll(() => {

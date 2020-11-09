@@ -15,7 +15,7 @@ const mapStateToProps = (state: IState) => ({
   inventorySlots: state.player.inventorySlots,
 });
 
-const HudItems = ({ hp, mp, inventorySlots, percentage }: any) => {
+export const HudItems = ({ hp, mp, inventorySlots, percentage }: any) => {
   const [inventoryOpen, setInventoryOpen] = useState(false);
   const showInventory = () => {
     setInventoryOpen(!inventoryOpen);
