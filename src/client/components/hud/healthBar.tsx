@@ -5,10 +5,10 @@ import { IHealth } from '../../../typings/HUDTypes';
 
 import '../../../stylesheets/HUD-Styles/healthBar.scss';
 
-const HealthBar = (props: IHealth) => {
+const HealthBar = ({ hp, percentage }: IHealth) => {
   return (
     <div className='health-bar'>
-      <Filler hp={props.hp} percentage={props.percentage} />
+      <Filler hp={hp} percentage={percentage} />
     </div>
   );
 };

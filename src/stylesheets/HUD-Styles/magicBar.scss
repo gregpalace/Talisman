@@ -1,4 +1,4 @@
-.health-bar {
+.magic-bar {
   position: relative;
   height: 20px;
   width: 350px;
@@ -7,8 +7,8 @@
   border-radius: 50px;
   border: 1px solid #333;
   background-color: #e0e0eb;
-  .filler {
-    background: #00ff00;
+  .mp-filler {
+    background: #4da6ff;
     height: 100%;
     border-radius: inherit;
   }

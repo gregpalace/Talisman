@@ -9,7 +9,7 @@ const Filler = ({ hp, percentage }: IFiller) => {
       className='filler'
       style={{ textAlign: 'center', width: `${percentage}%` }}
     >
-      {hp >= 20 ? `${hp} / ${MAX_HP}` : ''}
+      HP: {hp >= 20 ? `${hp} / ${MAX_HP}` : ''}
     </div>
   );
 };

@@ -3,12 +3,13 @@ import { connect } from 'react-redux';
 
 import * as actions from '../actions/actions';
 
-import { IState } from '../../typings/PlayerTypes';
 import Map from '../components/Map';
 import Player from '../components/Player';
 import HealthBar from '../components/hud/healthBar';
+import HudItems from '../containers/HudItems';
 import { tiles } from '../../data/maps/1/map1';
 import store from '../../store';
+import { IState } from '../../typings/PlayerTypes';
 
 const mapStateToProps = (state: IState) => ({
   position: state.player.position,
@@ -47,7 +48,7 @@ const World = (props: IWorldProps) => {
     >
       <Map />
       <Player />
-      <HealthBar hp={props.hp} percentage={props.percentage} />
+      <HudItems />
     </div>
   );
 };
