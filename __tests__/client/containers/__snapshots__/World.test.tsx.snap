@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React unit tests <World /> Should render correctly 1`] = `
+<div
+  style={
+    Object {
+      "height": "500px",
+      "margin": "20px auto",
+      "position": "relative",
+      "width": "1000px",
+    }
+  }
+>
+  <Connect(Map) />
+  <Connect(Player) />
+  <Connect(Component) />
+</div>
+`;

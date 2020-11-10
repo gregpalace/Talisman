@@ -2,12 +2,14 @@
 
 exports[`React unit tests <MapRow /> Should render correctly 1`] = `
 <div
-  className="tile null"
+  className="tile grass"
   style={
     Object {
       "height": 50,
       "width": 50,
     }
   }
-/>
+>
+  0
+</div>
 `;

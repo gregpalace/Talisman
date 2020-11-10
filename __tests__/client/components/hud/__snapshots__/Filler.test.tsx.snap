@@ -5,8 +5,12 @@ exports[`React unit tests Filler /> should render correctly 1`] = `
   className="filler"
   style={
     Object {
+      "textAlign": "center",
       "width": "50%",
     }
   }
-/>
+>
+  HP: 
+  100 / 100
+</div>
 `;

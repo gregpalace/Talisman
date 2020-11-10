@@ -29,7 +29,7 @@ interface IWorldProps {
   takeDamage: any;
 }
 
-const World = (props: IWorldProps) => {
+export const World = (props: IWorldProps) => {
   store.dispatch({
     type: 'ADD_TILES',
     payload: {

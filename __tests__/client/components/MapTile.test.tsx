@@ -7,8 +7,12 @@ import MapTile from '../../../src/client/components/MapTile';
 describe('React unit tests', () => {
   let wrapper: any;
 
+  const props = {
+    tile: 0,
+  };
+
   beforeEach(() => {
-    wrapper = shallow(<MapTile />);
+    wrapper = shallow(<MapTile {...props} />);
   });
 
   describe('<MapRow />', () => {

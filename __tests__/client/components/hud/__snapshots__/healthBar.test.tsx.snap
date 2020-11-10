@@ -5,6 +5,7 @@ exports[`React unit tests HealthBar /> should render correctly 1`] = `
   className="health-bar"
 >
   <Filler
+    hp={100}
     percentage={50}
   />
 </div>

@@ -7,8 +7,12 @@ import MapRow from '../../../src/client/components/MapRow';
 describe('React unit tests', () => {
   let wrapper: any;
 
+  const props = {
+    tiles: [],
+  };
+
   beforeEach(() => {
-    wrapper = shallow(<MapRow />);
+    wrapper = shallow(<MapRow {...props} />);
   });
 
   describe('<MapRow />', () => {

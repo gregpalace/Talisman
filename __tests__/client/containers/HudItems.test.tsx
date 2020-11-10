@@ -8,7 +8,7 @@ import { HudItems } from '../../../src/client/containers/HudItems';
 
 describe('React unit tests', () => {
   let wrapper: any;
-  const showInventory = jest.fn();
+  let showInventory: any;
 
   const props = {
     hp: 100,
@@ -16,7 +16,8 @@ describe('React unit tests', () => {
     percentage: 10,
   };
 
-  beforeAll(() => {
+  beforeEach(() => {
+    showInventory = jest.fn();
     wrapper = shallow(<HudItems {...props} showInventory={showInventory} />);
   });
 
@@ -41,8 +42,8 @@ describe('React unit tests', () => {
       expect(wrapper.find('button').prop('onClick')).toBeInstanceOf(Function);
     });
     it('should open a modal when the show inventory button is clicked', () => {
-      const button = wrapper.find('button');
-      const mockCallBack = button.prop('showInventory');
+      wrapper.find('button').at(0).simulate('click');
+      expect(showInventory).toHaveBeenCalled();
     });
   });
 });

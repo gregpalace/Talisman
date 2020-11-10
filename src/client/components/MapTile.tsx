@@ -5,7 +5,7 @@ import { IMapTile } from '../../typings/MapTypes';
 
 import '../../stylesheets/tiles.scss';
 
-const MapTile: React.FC<IMapTile> = (props) => {
+const MapTile: React.FC<IMapTile> = ({ tile }) => {
   const getTileSprite = (type: number | null) => {
     switch (type) {
       case 0:
@@ -21,13 +21,13 @@ const MapTile: React.FC<IMapTile> = (props) => {
 
   return (
     <div
-      className={`tile ${getTileSprite(props.tile)}`}
+      className={`tile ${getTileSprite(tile)}`}
       style={{
         height: SPRITE_SIZE,
         width: SPRITE_SIZE,
       }}
     >
-      {props.tile}
+      {tile}
     </div>
   );
 };
