@@ -11,7 +11,7 @@ const mapStateToProps = (state: IState) => {
   };
 };
 
-const Player = (props: any) => {
+export const Player = (props: any) => {
   return (
     <div
       style={{
