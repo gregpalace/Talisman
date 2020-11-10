@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React unit tests <MagicBar /> should render correctly 1`] = `
+<div
+  className="magic-bar"
+>
+  <MpFiller
+    mp={23}
+    percentage={50}
+  />
+</div>
+`;
