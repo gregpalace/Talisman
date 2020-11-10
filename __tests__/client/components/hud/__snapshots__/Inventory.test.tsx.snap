@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React unit tests <Inventory /> should render properly 1`] = `
+<div
+  id="player-inventory"
+>
+  <ul
+    id="player-table"
+  >
+    <li>
+      Level: 5
+    </li>
+    <li>
+      HP: 
+      130
+    </li>
+    <li>
+      MP: 
+      230
+    </li>
+  </ul>
+  <aside
+    id="inventory-items"
+  >
+    <section
+      className="items"
+    >
+      <EmptySlot />
+      <EmptySlot />
+      <EmptySlot />
+    </section>
+    <section
+      className="items"
+    >
+      <EmptySlot />
+      <EmptySlot />
+      <EmptySlot />
+    </section>
+  </aside>
+  <hr />
+  <footer
+    className="inventory-slots"
+  >
+    <h4
+      className="slots"
+    >
+      Slots Available: 
+      1
+    </h4>
+  </footer>
+</div>
+`;
