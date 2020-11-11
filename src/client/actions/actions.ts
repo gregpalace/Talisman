@@ -1,6 +1,6 @@
 import { Dispatch } from 'react';
 import * as types from '../constants/actionTypes';
-import { tiles } from '../../data/maps/1/map1';
+import { tiles } from '../../data/maps/map1';
 
 export const takeDamage = () => ({
   type: types.TAKE_DAMAGE,
