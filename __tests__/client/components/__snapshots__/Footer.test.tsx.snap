@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React unit tests <Footer /> should render correctly 1`] = `
+<footer
+  className="footer"
+>
+  <span>
+    Talisman ~ v1
+     
+  </span>
+  <a
+    className="footer-link"
+    href="https://github.com/gregpalace/Talisman"
+  >
+    View on Github
+  </a>
+</footer>
+`;

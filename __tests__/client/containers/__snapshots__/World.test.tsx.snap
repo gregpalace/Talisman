@@ -12,7 +12,7 @@ exports[`React unit tests <World /> Should render correctly 1`] = `
   }
 >
   <Connect(Map) />
-  <Connect(Player) />
+  <Connect(Component) />
   <Connect(Component) />
 </div>
 `;
