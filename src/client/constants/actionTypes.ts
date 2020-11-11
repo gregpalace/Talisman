@@ -16,3 +16,7 @@ export const MAP_HEIGHT = SPRITE_SIZE * 20;
 // Game Viewport
 export const GAME_VIEWPORT_SIZE = 350;
 export const GAME_VIEWPORT_SIZE_LG = 400;
+
+// Misc.
+export const VERSION = 1.0;
+export const FLAME_SIZE = 40;

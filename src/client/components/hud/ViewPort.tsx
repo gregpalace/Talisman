@@ -1,10 +1,7 @@
 import React, { Children } from 'react';
 import { connect } from 'react-redux';
 
-import {
-  GAME_VIEWPORT_SIZE,
-  GAME_VIEWPORT_SIZE_LG,
-} from '../../constants/actionTypes';
+import { GAME_VIEWPORT_SIZE } from '../../constants/actionTypes';
 
 import '../../../stylesheets/viewport.scss';
 

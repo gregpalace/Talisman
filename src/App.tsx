@@ -1,18 +1,23 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import Footer from './client/components/Footer';
 import World from './client/containers/World';
 import Viewport from './client/components/hud/ViewPort';
 
 import '../src/stylesheets/index.scss';
 
 const App = ({ appState }: any) => {
+  let showFooter = true;
   return (
-    <div>
-      <Viewport>
-        <World />
-      </Viewport>
-    </div>
+    <>
+      <div className='app-container'>
+        <Viewport>
+          <World />
+        </Viewport>
+      </div>
+      {showFooter && <Footer />}
+    </>
   );
 };
 

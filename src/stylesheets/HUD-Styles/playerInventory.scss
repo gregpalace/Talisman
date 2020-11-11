@@ -8,9 +8,10 @@ li {
 
 #player-inventory {
   position: absolute;
-  z-index: 2;
-  top: 10rem;
-  width: 40vw;
+  bottom: 150px;
+  right: 400px;
+  z-index: 1;
+  width: 20vw;
   border: $borderProperties;
   background-color: $modalBackground;
 }
@@ -27,7 +28,6 @@ li {
 }
 
 .inventory-slots {
-  height: 2%;
   .slots {
     font-family: 'Courier New', Courier, monospace;
     font-style: oblique;

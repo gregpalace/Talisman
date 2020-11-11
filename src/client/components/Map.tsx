@@ -39,11 +39,11 @@ const Map: React.FC<IMapProps> = ({ tiles }) => {
       style={{
         position: 'relative',
         top: '0px',
-        left: '0px',
+        right: '250px',
         width: '1000px', // 800
         height: '500px', // 480
         backgroundColor: 'green',
-        border: '4px solid white',
+        border: '1px solid black',
         margin: '10px auto',
       }}
     >

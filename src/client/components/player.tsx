@@ -1,25 +1,24 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { IState } from '../../typings/PlayerTypes';
+import { IState, IPlayerState } from '../../typings/PlayerTypes';
 
 import handleMovement from './handleMovement';
 import walkSprite from '../../assets/walkSprite.png';
 
-const mapStateToProps = (state: IState) => {
-  return {
-    ...state,
-  };
-};
+const mapStateToProps = (state: IState) => ({
+  position: state.player.position,
+  spritePosition: state.player.spritePosition,
+});
 
-export const Player = (props: any) => {
+export const Player = ({ position, spritePosition }: IPlayerState) => {
   return (
     <div
       style={{
         position: 'absolute',
-        top: props.player.position[0],
-        left: props.player.position[1],
+        top: position[0],
+        left: position[1],
         backgroundImage: `url('${walkSprite}')`,
-        backgroundPosition: props.player.spritePosition,
+        backgroundPosition: spritePosition,
         width: '50px',
         height: '50px',
       }}

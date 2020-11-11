@@ -1,0 +1,23 @@
+.footer {
+  font-size: 18px;
+  text-transform: none;
+  margin: 35px 0 25px;
+
+  position: relative;
+  top: 250px;
+
+  align-self: center;
+  text-align: center;
+
+  cursor: default;
+  user-select: none;
+
+  .footer-link {
+    color: var(--gray);
+    text-decoration: none;
+
+    padding-bottom: 3px;
+
+    border-bottom: 1px solid;
+  }
+}
