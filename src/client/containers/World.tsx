@@ -6,7 +6,7 @@ import * as actions from '../actions/actions';
 import Map from '../components/Map';
 import Player from '../components/Player';
 import HudItems from '../containers/HudItems';
-import { tiles } from '../../data/maps/1/map1';
+import Map1 from '../../data/maps/map1';
 import store from '../../store';
 import { IState } from '../../typings/PlayerTypes';
 
@@ -33,7 +33,7 @@ export const World = (props: IWorldProps) => {
   store.dispatch({
     type: 'ADD_TILES',
     payload: {
-      tiles,
+      Map1,
     },
   });
   return (
