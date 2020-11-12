@@ -27,3 +27,13 @@ export const monsterDied = () => ({
   type: types.MONSTER_DIED,
   payload: null,
 });
+
+export const drinkPotion = (item: any) => ({
+  type: types.HEAL,
+  payload: item.hp,
+});
+
+export const buyItem = (item: any) => ({
+  type: types.LOSE_COINS,
+  payload: item.value,
+});

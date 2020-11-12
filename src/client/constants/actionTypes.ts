@@ -11,8 +11,16 @@ export const MONSTER_ATTACKED = 'MONSTER_ATTACKED';
 export const PLAYER_ATTACKED = 'PLAYER_ATTACKED';
 export const MOVE_PLAYER = 'MOVE_PLAYER';
 export const RESET = 'RESET';
-export const TAKE_DAMAGE = 'TAKE_DAMAGE';
 export const ADD_TILES = 'ADD_TILES';
+
+// Stats Store Actions
+export const GET_COINS = 'GET_COINS';
+export const LOSE_COINS = 'LOSE_COINS';
+export const UNEQUIP_ITEM = 'UNEQUIP_ITEM';
+export const EQUIP_ITEM = 'EQUIP_ITEM';
+export const TAKE_DAMAGE = 'TAKE_DAMAGE';
+export const HEAL = 'HEAL';
+export const GET_EXP = 'GET_EXP';
 
 // Map Dimensions
 export const MAP_WIDTH = SPRITE_SIZE * 10;
