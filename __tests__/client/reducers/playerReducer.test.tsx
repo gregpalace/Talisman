@@ -1,5 +1,6 @@
 import subject from '../../../src/client/reducers/playerReducer';
 import handleMovement from '../../../src/client/components/handleMovement';
+import { types } from 'pg';
 
 describe('Player reducer tests', () => {
   let state: any;
@@ -8,10 +9,15 @@ describe('Player reducer tests', () => {
     hp: 100,
     mp: 150,
     position: [0, 0],
+    playerMoved: false,
+    playerAttacked: false,
+    monsterAttacked: false,
+    playerDied: false,
+    monsterDied: false,
     spritePosition: '0px 0px',
-    direction: 'east',
+    direction: 'EAST',
     walkIndex: 0,
-    inventorySlots: 10,
+    inventorySlots: 6,
   };
 
   describe('Reducer main functionality', () => {
@@ -50,5 +56,43 @@ describe('Player reducer tests', () => {
       const spritePosition = subject(state, action).spritePosition;
       expect(spritePosition).toBe('10 30');
     });
+  });
+
+  describe('MONSTER_DIED', () => {
+    const action = {
+      type: 'MONSTER_DIED',
+    };
+    it('should indicate if a monster was killed', () => {
+      expect(subject(state, action).monsterDied).toBe(true);
+      expect(subject(state, action).monsterDied).not.toBe(false);
+    });
+  });
+
+  describe('PLAYER_DIED', () => {
+    const action = {
+      type: 'PLAYER_DIED',
+    };
+    it('should indicate if a player was killed', () => {
+      expect(subject(state, action).playerDied).toBe(true);
+      expect(subject(state, action).playerDied).not.toBe(false);
+    });
+  });
+
+  describe('PLAYER_ATTACKED', () => {
+    const action = {
+      type: 'PLAYER_ATTACKED',
+    };
+    it('should indicate if a player was attacked by an enemy', () => {
+      expect(subject(state, action).playerAttacked).toBe(true);
+      expect(subject(state, action).playerAttacked).not.toBe(false);
+    });
+  });
+
+  describe('MONSTER_ATTACKED', () => {
+    const action = {
+      type: 'MONSTER_ATTACKED',
+    };
+    expect(subject(state, action).monsterAttacked).toBe(true);
+    expect(subject(state, action).monsterAttacked).not.toBe(false);
   });
 });

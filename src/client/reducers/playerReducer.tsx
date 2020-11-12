@@ -27,11 +27,11 @@ const playerReducer = (state = playerState, action: any) => {
       // trigger player's death sound
       return { ...state, playerDied: !state.playerDied };
 
-    case types.MONSTER_ATTACK:
+    case types.MONSTER_ATTACKED:
       // trigger monster's attack animation on player
       return { ...state, monsterAttacked: !state.monsterAttacked };
 
-    case types.PLAYER_ATTACK:
+    case types.PLAYER_ATTACKED:
       // trigger attack animation
       return { ...state, playerAttacked: !state.playerAttacked };
 

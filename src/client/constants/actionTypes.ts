@@ -7,8 +7,8 @@ export const INVENTORY_SLOTS = 6;
 // Store Actions
 export const MONSTER_DIED = 'MONSTER_DIED';
 export const PLAYER_DIED = 'PLAYER_DIED';
-export const MONSTER_ATTACK = 'MONSTER_ATTACK';
-export const PLAYER_ATTACK = 'PLAYER_ATTACK';
+export const MONSTER_ATTACKED = 'MONSTER_ATTACKED';
+export const PLAYER_ATTACKED = 'PLAYER_ATTACKED';
 export const MOVE_PLAYER = 'MOVE_PLAYER';
 export const RESET = 'RESET';
 export const TAKE_DAMAGE = 'TAKE_DAMAGE';

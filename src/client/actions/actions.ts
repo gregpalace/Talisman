@@ -12,3 +12,18 @@ export const setTiles = () => ({
     Map1,
   },
 });
+
+export const playerDied = () => ({
+  type: types.PLAYER_DIED,
+  payload: null,
+});
+
+export const playerAttacked = () => ({
+  type: types.PLAYER_ATTACKED,
+  payload: null,
+});
+
+export const monsterDied = () => ({
+  type: types.MONSTER_DIED,
+  payload: null,
+});
