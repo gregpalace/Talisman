@@ -5,7 +5,12 @@ export const SPRITE_SIZE = 50;
 export const INVENTORY_SLOTS = 6;
 
 // Store Actions
+export const MONSTER_DIED = 'MONSTER_DIED';
+export const PLAYER_DIED = 'PLAYER_DIED';
+export const MONSTER_ATTACK = 'MONSTER_ATTACK';
+export const PLAYER_ATTACK = 'PLAYER_ATTACK';
 export const MOVE_PLAYER = 'MOVE_PLAYER';
+export const RESET = 'RESET';
 export const TAKE_DAMAGE = 'TAKE_DAMAGE';
 export const ADD_TILES = 'ADD_TILES';
 

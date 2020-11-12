@@ -11,6 +11,11 @@ export interface IPlayerState {
   readonly mp: number;
   readonly inventorySlots: number;
   readonly position: number[];
+  readonly playerMoved: boolean;
+  readonly playerAttacked: boolean;
+  readonly monsterAttacked: boolean;
+  readonly playerDied: boolean;
+  readonly monsterDied: boolean;
   readonly direction: string;
   readonly spritePosition: string;
   readonly walkIndex: number;

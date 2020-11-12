@@ -1,13 +1,11 @@
-import DragonSprite from '../../assets/tiles/dragon.png';
+import Imp from './imp/imp';
+import Goblin from './goblin/goblin';
+import Dragon from './dragon/dragon';
 
-const Dragon = {
-  hp: 100,
-  maxHp: 100,
-  atk: 80,
-  def: 50,
-  exp: 1000,
-  type: 'dragon',
-  sprite: DragonSprite,
+const monsters = {
+  dragon: Dragon,
+  goblin: Goblin,
+  imp: Imp,
 };
 
-export default Dragon;
+export default monsters;
