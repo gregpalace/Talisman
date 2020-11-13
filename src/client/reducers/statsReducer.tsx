@@ -2,7 +2,9 @@ import _cloneDeep from 'lodash.clonedeep';
 
 import * as types from '../constants/actionTypes';
 
-const initialState = {
+import { IStatsState } from '../../typings/ReducerTypes';
+
+const initialState: IStatsState = {
   hp: 100,
   maxHp: 100,
   damage: 4,

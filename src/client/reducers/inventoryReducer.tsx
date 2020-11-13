@@ -2,7 +2,9 @@ import * as types from '../constants/actionTypes';
 import _cloneDeep from 'lodash.clonedeep';
 import serializer from '../../utils/serialize-items';
 
-const initialState = {
+import { IInventoryState } from '../../typings/ReducerTypes';
+
+const initialState: IInventoryState = {
   items: [],
   maxItems: types.MAX_ITEMS,
 };

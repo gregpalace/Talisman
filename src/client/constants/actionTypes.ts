@@ -28,6 +28,13 @@ export const DROP_ITEM = 'DROP_ITEM';
 export const GET_ITEM = 'GET_ITEM';
 export const UPGRADE_BACKPACK = 'UPGRADE_BACKPACK';
 
+// Monster Store Actions
+export const MOVE_MONSTER = 'MOVE_MONSTER';
+export const DAMAGE_TO_MONSTER = 'DAMAGE_TO_MONSTER';
+export const GENERATE_MONSTERS = 'GENERATE_MONSTERS';
+export const SHOW_MONSTER = 'SHOW_MONSTER';
+export const HIDE_MONSTER = 'HIDE_MONSTER';
+
 // Map Dimensions
 export const MAP_WIDTH = SPRITE_SIZE * 10;
 export const MAP_HEIGHT = SPRITE_SIZE * 20;
