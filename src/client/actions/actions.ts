@@ -37,3 +37,17 @@ export const buyItem = (item: any) => ({
   type: types.LOSE_COINS,
   payload: item.value,
 });
+
+export const pickupItem = (item: any) => ({
+  type: types.GET_ITEM,
+  payload: item,
+});
+
+export default function equipItem(item: any) {
+  return (dispatch: any) => {
+    dispatch({
+      type: types.EQUIP_ITEM,
+      payload: item,
+    });
+  };
+}

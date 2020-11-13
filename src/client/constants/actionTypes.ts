@@ -1,6 +1,7 @@
 // Player Stats
 export const MAX_HP = 100;
 export const MAX_MP = 150;
+export const MAX_ITEMS = 6;
 export const SPRITE_SIZE = 50;
 export const INVENTORY_SLOTS = 6;
 
@@ -21,6 +22,11 @@ export const EQUIP_ITEM = 'EQUIP_ITEM';
 export const TAKE_DAMAGE = 'TAKE_DAMAGE';
 export const HEAL = 'HEAL';
 export const GET_EXP = 'GET_EXP';
+
+// Inventory Store Actions
+export const DROP_ITEM = 'DROP_ITEM';
+export const GET_ITEM = 'GET_ITEM';
+export const UPGRADE_BACKPACK = 'UPGRADE_BACKPACK';
 
 // Map Dimensions
 export const MAP_WIDTH = SPRITE_SIZE * 10;
