@@ -111,27 +111,6 @@ describe('Stats reducer tests', () => {
   });
 
   describe('RESET', () => {
-    let action: any;
-
-    beforeEach(() => {
-      state = {
-        hp: 100,
-        maxHp: 100,
-        damage: 4,
-        defence: 1,
-        level: 5,
-        exp: 0,
-        expToNxtLevel: 25,
-        coins: 50,
-        equippedItems: {},
-        levelUp: { level: 0, hp: 0, dmg: 0 },
-      };
-      action = {
-        type: 'HEAL',
-        payload: 40,
-      };
-    });
-
     it('should return initial state when game is reset', () => {
       const action = { type: 'RESET' };
       expect(subject(state, action)).toMatchObject(state);
