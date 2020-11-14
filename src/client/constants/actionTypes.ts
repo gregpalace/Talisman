@@ -35,6 +35,12 @@ export const GENERATE_MONSTERS = 'GENERATE_MONSTERS';
 export const SHOW_MONSTER = 'SHOW_MONSTER';
 export const HIDE_MONSTER = 'HIDE_MONSTER';
 
+// Dialog Store Actions
+export const SET_CHEST_DATA = 'SET_CHEST_DATA';
+export const OPEN_SETTINGS = 'OPEN_SETTINGS';
+export const CLOSE_SETTINGS = 'CLOSE_SETTINGS';
+export const SET_STORY_MAP = 'SET_STORY_MAP';
+
 // Map Dimensions
 export const MAP_WIDTH = SPRITE_SIZE * 10;
 export const MAP_HEIGHT = SPRITE_SIZE * 20;

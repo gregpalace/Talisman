@@ -1,5 +1,7 @@
-import { Dispatch } from 'react';
 import * as types from '../constants/actionTypes';
+
+import store from '../../store';
+
 import Map1 from '../../data/maps/map1';
 
 export const takeDamage = () => ({
@@ -43,7 +45,7 @@ export const pickupItem = (item: any) => ({
   payload: item,
 });
 
-export default function equipItem(item: any) {
+export function equipItem(item: any) {
   return (dispatch: any) => {
     dispatch({
       type: types.EQUIP_ITEM,
@@ -51,3 +53,47 @@ export default function equipItem(item: any) {
     });
   };
 }
+
+// export function toggleSettings() {
+//   const settings = store.getState().dialog.settings;
+//   return (dispatch: any) => {
+//     if (settings) {
+//       dispatch({
+//         type: 'CLOSE_SETTINGS',
+//         payload: null,
+//       });
+//     } else {
+//       dispatch({
+//         type: 'OPEN_SETTINGS',
+//         payload: null,
+//       });
+//     }
+//   };
+// }
+
+export const closeChestDialog = () => {
+  return () => {
+    ({
+      type: types.SET_CHEST_DATA,
+      payload: false,
+    });
+  };
+};
+
+export const openSettings = () => {
+  return () => {
+    ({
+      type: types.OPEN_SETTINGS,
+      payload: null,
+    });
+  };
+};
+
+export const closeSettings = () => {
+  return () => {
+    ({
+      type: types.CLOSE_SETTINGS,
+      payload: null,
+    });
+  };
+};

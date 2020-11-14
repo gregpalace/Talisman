@@ -20,7 +20,7 @@ interface IPlayerState {
 }
 
 interface IMapState {
-  readonly tiles: number[];
+  readonly Map1: number[];
 }
 
 interface IMapProps {
@@ -30,7 +30,7 @@ interface IMapProps {
 
 const mapStateToProps = (state: IMapState) => {
   return {
-    tiles: state.map.tiles,
+    tiles: state.map.Map1,
   };
 };
 const Map: React.FC<IMapProps> = ({ tiles }) => {

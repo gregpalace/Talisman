@@ -4,13 +4,15 @@ import monsterReducer from './monsterReducer';
 import mapReducer from './mapReducer';
 import statsReducer from './statsReducer';
 import inventoryReducer from './inventoryReducer';
+import dialogManagerReducer from './dialogManagerReducer';
 
 // Combine all reducers
 const rootReducers = combineReducers({
   player: playerReducer,
   monster: monsterReducer,
-  stats: statsReducer,
   inventory: inventoryReducer,
+  dialog: dialogManagerReducer,
+  stats: statsReducer,
   map: mapReducer,
 });
 

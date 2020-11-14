@@ -44,3 +44,19 @@ interface ILevelUp {
   hp: number;
   dmg: number;
 }
+
+export interface IDialog {
+  gameText: boolean;
+  gameOver: boolean;
+  gameStart: boolean;
+  gameInstructions: boolean;
+  gameSelect: null;
+  gameWin: false;
+  paused: boolean;
+  chest: boolean;
+  chestOpen: boolean;
+  shop: boolean;
+  settings: boolean;
+  inventory: boolean;
+  levelUp: boolean;
+}
