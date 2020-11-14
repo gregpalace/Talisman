@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React Unit Tests <Shop /> should render correctly 1`] = `
+<div
+  className="dialog__container white-border"
+>
+  <button
+    className="dialog__back-button"
+    onClick={[MockFunction]}
+  >
+    <i
+      className="fa fa-arrow-left"
+    />
+  </button>
+</div>
+`;
