@@ -1,7 +1,8 @@
 import subject from '../../../src/client/reducers/statsReducer';
+import { IStatsState } from '../../../src/typings/ReducerTypes';
 
 describe('Stats reducer tests', () => {
-  let state: any;
+  let state: IStatsState;
 
   state = {
     hp: 100,

@@ -8,7 +8,7 @@ import { HudItems } from '../../../src/client/containers/HudItems';
 
 describe('React unit tests', () => {
   let wrapper: any;
-  let showInventory: any;
+  let showInventory: () => void;
 
   const props = {
     hp: 100,

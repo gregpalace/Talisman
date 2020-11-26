@@ -1,9 +1,10 @@
 import subject from '../../../src/client/reducers/playerReducer';
 import handleMovement from '../../../src/client/components/handleMovement';
 import { types } from 'pg';
+import { IPlayerState } from '../../../src/typings/PlayerTypes';
 
 describe('Player reducer tests', () => {
-  let state: any;
+  let state: IPlayerState;
 
   state = {
     hp: 100,

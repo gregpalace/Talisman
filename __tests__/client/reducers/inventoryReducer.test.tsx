@@ -5,9 +5,10 @@ import LeatherArmor from '../../../src/data/items/armor/leather-armor';
 import LeatherBoots from '../../../src/data/items/armor/leather-boots';
 import LeatherGloves from '.../../../src/data/items/armor/leather-gloves';
 import RustySword from '../../../src/data/items/weapons/rusty-sword';
+import { IInventoryState } from '../../../src/typings/ReducerTypes';
 
 describe('Inventory reducer tests', () => {
-  let state: any;
+  let state: IInventoryState;
 
   state = {
     items: [],

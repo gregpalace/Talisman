@@ -33,12 +33,10 @@ describe('Map reducer tests', () => {
           ],
         },
       };
-      const tileObj = subject(state, action);
-      const tileArray = tileObj.tiles;
-      expect(tileObj).toEqual(action.payload);
-      expect(tileArray.length).toBe(3);
-      expect(tileArray[2][2]).toBe(1);
-      expect(tileArray[2][3]).toBe(5);
+      const tileArray = subject(state, action).tiles;
+      expect(tileArray.length).toEqual(3);
+      expect(tileArray[2][2]).toEqual(1);
+      expect(tileArray[2][3]).toEqual(5);
     });
   });
 });

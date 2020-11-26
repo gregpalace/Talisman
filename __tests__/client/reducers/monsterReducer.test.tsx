@@ -1,7 +1,8 @@
 import subject from '../../../src/client/reducers/monsterReducer';
+import { IMonsterState } from '../../../src/typings/ReducerTypes';
 
 describe('Stats reducer tests', () => {
-  let state: any;
+  let state: IMonsterState;
 
   state = {
     config: {},
