@@ -1,6 +1,9 @@
+import { IStatsState } from './ReducerTypes';
+
 export interface IState {
   readonly map: IMapState;
   readonly player: IPlayerState;
+  readonly stats: IStatsState;
 }
 
 export interface IMapState {

@@ -22,6 +22,18 @@ const initialState: IDialog = {
 
 const dialogManagerReducer = (state = initialState, action: any) => {
   switch (action.type) {
+    case 'PAUSE':
+      const { shop, chest, gameStart, inventory, pause } = action.payload;
+
+      return {
+        ...state,
+        shop: shop || false,
+        chest: chest || false,
+        gameStart: gameStart || false,
+        inventory: inventory || false,
+        paused: pause,
+      };
+
     case types.SET_CHEST_DATA:
       return { ...state, chestOpen: action.payload };
 
