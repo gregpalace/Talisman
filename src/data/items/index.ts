@@ -28,4 +28,6 @@ export const randomItemsT1 = [
   LeatherGloves,
 ];
 
+export const randomItemsT2 = [RustySword, LeatherArmor, LeatherBoots];
+
 export default Items;

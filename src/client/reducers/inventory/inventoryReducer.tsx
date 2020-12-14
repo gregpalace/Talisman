@@ -1,8 +1,8 @@
-import * as types from '../constants/actionTypes';
+import * as types from '../../constants/actionTypes';
 import _cloneDeep from 'lodash.clonedeep';
-import serializer from '../../utils/serialize-items';
+import serializer from '../../../utils/serialize-items';
 
-import { IInventoryState } from '../../typings/ReducerTypes';
+import { IInventoryState } from '../../../typings/ReducerTypes';
 
 const initialState: IInventoryState = {
   items: [],
@@ -25,12 +25,12 @@ const inventoryReducer = (state = initialState, action: any) => {
       });
       return { ...state, items: newItems };
 
-    // case types.GET_ITEM:
-    //   // Copy of our items array
-    //   newState = _cloneDeep(state);
-    //   // push new contents into the copy of our items array
-    //   newState.items.push({ ...action.payload, id: serializer() });
-    //   return newState;
+    case types.GET_ITEM:
+      // Copy of our items array
+      newState = _cloneDeep(state);
+      // push new contents into the copy of our items array
+      newState.items.push({ ...action.payload, id: serializer() });
+      return newState;
 
     case types.UPGRADE_BACKPACK:
       return {

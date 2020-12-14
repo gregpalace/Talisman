@@ -90,7 +90,8 @@
     "lodash.clonedeep": "^4.5.0",
     "pg": "^8.3.3",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-timeout": "^2.0.0"
   },
   "bugs": {
     "url": "https://github.com/gregpalace/Talisman/issues"

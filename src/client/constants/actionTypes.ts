@@ -4,6 +4,8 @@ export const MAX_MP = 150;
 export const MAX_ITEMS = 6;
 export const SPRITE_SIZE = 50;
 export const INVENTORY_SLOTS = 6;
+// how fast the player move animation plays (ms)
+export const ANIMATION_SPEED = 350;
 
 // Store Actions
 export const MONSTER_DIED = 'MONSTER_DIED';
@@ -13,6 +15,10 @@ export const PLAYER_ATTACKED = 'PLAYER_ATTACKED';
 export const MOVE_PLAYER = 'MOVE_PLAYER';
 export const RESET = 'RESET';
 export const ADD_TILES = 'ADD_TILES';
+
+// SaltBar Actions
+export const NOT_ENOUGH_COINS = 'NOT_ENOUGH_COINS';
+export const TOO_MANY_ITEMS = 'TOO_MANY_ITEMS';
 
 // Stats Store Actions
 export const GET_COINS = 'GET_COINS';
@@ -42,8 +48,12 @@ export const CLOSE_SETTINGS = 'CLOSE_SETTINGS';
 export const SET_STORY_MAP = 'SET_STORY_MAP';
 
 // Map Dimensions
+export const START_MAP = '1_1';
 export const MAP_WIDTH = SPRITE_SIZE * 10;
 export const MAP_HEIGHT = SPRITE_SIZE * 20;
+const TILE_HEIGHT = 15;
+const TILE_WIDTH = 20;
+export const MAP_DIMENSIONS = [TILE_WIDTH, TILE_HEIGHT];
 
 // Game Viewport
 export const GAME_VIEWPORT_SIZE = 350;
@@ -52,3 +62,7 @@ export const GAME_VIEWPORT_SIZE_LG = 400;
 // Misc.
 export const VERSION = 1.0;
 export const FLAME_SIZE = 40;
+export const PAUSE = 'PAUSE';
+export const TIER_2 = 10;
+// set the duration for showing the snackbar (ms)
+export const SNACK_DURATION = 2500;

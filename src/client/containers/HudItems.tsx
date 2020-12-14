@@ -20,6 +20,7 @@ export const HudItems = ({ hp, mp, inventorySlots, percentage }: any) => {
   const showInventory = () => {
     setInventoryOpen(!inventoryOpen);
   };
+
   return (
     <div id='hud-items'>
       <HealthBar hp={hp} percentage={percentage} />
