@@ -1,8 +1,8 @@
-import * as types from '../constants/actionTypes';
+import * as types from '../../constants/actionTypes';
 import _cloneDeep from 'lodash.clonedeep';
-import serializer from '../../utils/serialize-items';
+import serializer from '../../../utils/serialize-items';
 
-import { IDialog } from '../../typings/ReducerTypes';
+import { IDialog } from '../../../typings/ReducerTypes';
 
 const initialState: IDialog = {
   gameText: false,

@@ -1,8 +1,8 @@
-import * as types from '../constants/actionTypes';
+import * as types from '../../constants/actionTypes';
 
 import _cloneDeep from 'lodash.clonedeep';
 
-import { IMonsterState } from '../../typings/ReducerTypes';
+import { IMonsterState } from '../../../typings/ReducerTypes';
 
 const initialState: IMonsterState = {
   config: {},

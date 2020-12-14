@@ -53,7 +53,9 @@ export const MAP_WIDTH = SPRITE_SIZE * 10;
 export const MAP_HEIGHT = SPRITE_SIZE * 20;
 const TILE_HEIGHT = 15;
 const TILE_WIDTH = 20;
-export const MAP_DIMENSIONS = [TILE_WIDTH, TILE_HEIGHT];
+export const MAP_DIMENSIONS = [TILE_WIDTH, TILE_HEIGHT]; // 20, 15
+// set the number of tiles to pad the map with (so the player cant see edge)
+export const MAP_PADDING_DISTANCE = 5;
 
 // Game Viewport
 export const GAME_VIEWPORT_SIZE = 350;

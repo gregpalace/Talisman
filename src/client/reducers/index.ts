@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import playerReducer from './playerReducer';
-import monsterReducer from './monsterReducer';
-import mapReducer from './mapReducer';
-import statsReducer from './statsReducer';
-import inventoryReducer from './inventoryReducer';
-import dialogManagerReducer from './dialogManagerReducer';
+import playerReducer from './player/playerReducer';
+import monsterReducer from './monsters/monsterReducer';
+import mapReducer from './map/mapReducer';
+import statsReducer from './stats/statsReducer';
+import inventoryReducer from './inventory/inventoryReducer';
+import dialogManagerReducer from './dialogManager/dialogManagerReducer';
 
 // Combine all reducers
 const rootReducers = combineReducers({

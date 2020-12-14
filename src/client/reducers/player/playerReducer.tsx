@@ -1,6 +1,6 @@
-import * as types from '../constants/actionTypes';
+import * as types from '../../constants/actionTypes';
 
-import { IPlayerState } from '../../typings/PlayerTypes';
+import { IPlayerState } from '../../../typings/PlayerTypes';
 
 const playerState: IPlayerState = {
   hp: 100,
