@@ -11,6 +11,8 @@ describe('Padding generation tests', () => {
     expect(paddingResults.right).toBeDefined();
   });
 
+  xit('should return a padding object with properties', () => {});
+
   it('should generate an array of subarrays based on padding distance', () => {
     const paddingResults = generatePadding();
     expect(paddingResults.top.length).toEqual(MAP_PADDING_DISTANCE);
