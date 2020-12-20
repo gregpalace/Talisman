@@ -1,13 +1,7 @@
 import * as types from '../constants/actionTypes';
 
-import store from '../../store';
-
 import Map1 from '../../data/maps/map1';
 import maps from '../../data/maps';
-import { Dispatch } from 'react';
-import { IStatsState } from '../../typings/ReducerTypes';
-import { IState } from '../../typings/PlayerTypes';
-import { AnyAction } from 'redux';
 
 export const takeDamage = () => ({
   type: types.TAKE_DAMAGE,
@@ -43,3 +37,45 @@ export const setUpMaps = () => ({
     storyMaps: maps,
   },
 });
+
+export const resetGameState = () => {
+  return (dispatch: any) => {
+    dispatch({
+      type: 'RESET',
+      payload: null,
+    });
+
+    dispatch({
+      type: 'PAUSE',
+      payload: {
+        pause: true,
+        gameStart: true,
+      },
+    });
+  };
+};
+
+export const backToSelect = () => {
+  return (dispatch: any) => {
+    dispatch({
+      type: 'PAUSE',
+      payload: {
+        pause: true,
+        gameStart: true,
+      },
+    });
+  };
+};
+
+export const startMainGame = () => {
+  return (dispatch: any, getState: any) => {
+    // this needs to happen before add tiles, explore tiles, or add monsters
+    dispatch({
+      type: 'SET_START_MAP',
+      payload: {
+        startMap: types.START_MAP,
+        gameMode: 'story',
+      },
+    });
+  };
+};
