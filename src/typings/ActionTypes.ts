@@ -1,4 +1,4 @@
 export interface IAction {
-  type: string | null;
+  type: any | null;
   payload?: any | null;
 }

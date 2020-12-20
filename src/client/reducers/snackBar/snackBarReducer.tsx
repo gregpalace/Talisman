@@ -1,7 +1,7 @@
 import * as types from '../../constants/actionTypes';
 
 const initialState = {
-  notEnoughGold: '',
+  notEnoughCoins: '',
   tooManyItems: '',
   itemDropped: '',
   itemReceived: '',
@@ -12,7 +12,7 @@ const snackbarReducer = (state = initialState, action: any) => {
     case types.NOT_ENOUGH_COINS:
       return {
         ...state,
-        notEnoughGold: `${action.payload.name}-${new Date().getTime()}`,
+        notEnoughCoins: `${action.payload.name}-${new Date().getTime()}`,
       };
 
     case types.TOO_MANY_ITEMS:

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import Button from '../../../components/Button';
 import Dialog from '../../../components/Dialog';
-import { resetGameState } from '../../../actions/actions';
+import { resetGameState } from '../../world/actions/resetGame';
 import closeDialog from '../actions/closeDialog';
 
 import './styles.scss';

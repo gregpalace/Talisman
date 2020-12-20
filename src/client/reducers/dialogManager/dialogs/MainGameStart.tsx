@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Button from '../../../components/Button';
 import Dialog from '../../../components/Dialog';
 import { backToSelect } from '../../../actions/actions';
-import { startMainGame } from '../../../actions/actions';
+import { startMainGame } from '../../world/actions/startGame';
 
 import '../../../../stylesheets/mainGameStart.scss';
 

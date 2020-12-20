@@ -5,7 +5,7 @@ import Button from '../../../components/Button';
 import ConfirmDialog from '../../../components/ConfirmDialog';
 import Dialog from '../../../components/Dialog';
 import { closeSettings } from '../actions/closeSettings';
-import { resetGameState } from '../../../actions/actions';
+import { resetGameState } from '../../world/actions/resetGame';
 
 import '../../../../stylesheets/settingsDialog.scss';
 

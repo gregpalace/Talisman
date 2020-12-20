@@ -26,6 +26,11 @@ export interface IStatsState {
   levelUp: ILevelUp;
 }
 
+interface ILevelUp {
+  level: number;
+  hp: number;
+  dmg: number;
+}
 export interface IInventoryState {
   items: any;
   maxItems: number | null;
@@ -37,12 +42,6 @@ interface IItems {
   defence?: number;
   image?: any;
   value?: number;
-}
-
-interface ILevelUp {
-  level: number;
-  hp: number;
-  dmg: number;
 }
 
 export interface IDialog {
