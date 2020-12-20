@@ -1,15 +1,20 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
-import Button from '../../../../components/button';
-import MicroDialog from '../../../../components/micro-dialog';
-import pickupItem from '../../../inventory/actions/pickup-item';
-import openChest from '../../actions/open-chest';
-import closeChestDialog from '../../actions/close-chest-dialog';
+import Button from '../../../../components/Button';
+import MicroDialog from '../../../../components/MicroDialog';
+import pickupItem from '../../../inventory/actions/pickupItem';
+import openChest from '../../actions/openChest';
+import closeChestDialog from '../../actions/closeChestDialog';
 
-import './styles.scss';
+import '../../../../../stylesheets/chestLoot.scss';
 
-const ChestLoot = ({ dialog, pickupItem, openChest, closeChestDialog }) => {
+const ChestLoot = ({
+  dialog,
+  pickupItem,
+  openChest,
+  closeChestDialog,
+}: any) => {
   const { chestOpen } = dialog;
   const { gold, exp, item } = chestOpen;
 
@@ -64,7 +69,7 @@ const ChestLoot = ({ dialog, pickupItem, openChest, closeChestDialog }) => {
   );
 };
 
-const mapStateToProps = ({ dialog }) => ({ dialog });
+const mapStateToProps = ({ dialog }: any) => ({ dialog });
 
 const actions = { pickupItem, openChest, closeChestDialog };
 

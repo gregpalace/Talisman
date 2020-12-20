@@ -16,7 +16,7 @@ const initialState = {
 
 const worldReducer = (state = initialState, action: any) => {
   let newState;
-  let currentMapData;
+  let currentMapData: any;
 
   switch (action.type) {
     case 'MAP_TRANSITION':
@@ -35,14 +35,14 @@ const worldReducer = (state = initialState, action: any) => {
       const { tiles, paddingTiles } = action.payload;
       currentMapData = getCurrentMap(newState);
       // get each tile
-      tiles.forEach((tile) => {
+      tiles.forEach((tile: any[]) => {
         currentMapData.tiles[tile[1]][tile[0]].explored = 1;
       });
 
       // create new array of the padding tiles location as strings
       // make sure to reverse the padding tiles values to get them in [y, x],
       // which is the format the map reads them (since its a 2d array, columns then rows)
-      const paddTiles = paddingTiles.map((value) =>
+      const paddTiles = paddingTiles.map((value: any) =>
         JSON.stringify(value.reverse())
       );
       // check each padding tile direction and see if any
@@ -51,7 +51,7 @@ const worldReducer = (state = initialState, action: any) => {
         Object.keys(currentMapData.paddingTiles).forEach((direction) => {
           currentMapData.paddingTiles[direction] = currentMapData.paddingTiles[
             direction
-          ].map((tileRow) => {
+          ].map((tileRow: any[]) => {
             return tileRow.map((tile) => {
               if (paddTiles.indexOf(JSON.stringify(tile.location)) > -1) {
                 tile.explored = 1;
@@ -64,57 +64,12 @@ const worldReducer = (state = initialState, action: any) => {
 
       return newState;
 
-    case 'LOAD_STORY_MAPS':
-      const _maps = _cloneDeep(maps);
-      // go over each story map and add explored values
-      // and variation data to the tiles
-      Object.keys(_maps).forEach((mapName) => {
-        const newTiles = attachMetaToTiles(_maps[mapName].tiles);
-        const newPaddTiles = generatePaddingTiles();
-
-        _maps[mapName] = {
-          ..._maps[mapName],
-          tiles: newTiles,
-          paddingTiles: newPaddTiles,
-        };
-      });
-
-      return { ...state, storyMaps: _maps };
-
-    case 'ADD_RANDOM_MAP':
-      const _randomMaps = _cloneDeep(state.randomMaps);
-
-      const randomTiles = attachMetaToTiles(action.payload.tiles);
-      const randomPaddTiles = generatePaddingTiles();
-
-      _randomMaps.push({
-        tiles: randomTiles,
-        id: payload.id,
-        paddingTiles: randomPaddTiles,
-      });
-
-      return { ...state, randomMaps: _randomMaps };
-
     case 'TAKE_TURN':
       // increment the turn
       return { ...state, turn: state.turn + 1 };
 
-    case 'SET_STORY_MAP':
-      const { direction, currentMap } = payload;
-
-      const { stairs } = state.storyMaps[currentMap];
-
-      return { ...state, currentMap: stairs[direction] };
-
-    case 'SET_ENDLESS_MAP':
-      return {
-        ...state,
-        currentMap: payload.map,
-        floorNum: payload.floorNum,
-      };
-
     case 'SET_START_MAP':
-      const { startMap, gameMode, floorNum } = payload;
+      const { startMap, gameMode, floorNum } = action.payload;
 
       return {
         ...state,
@@ -131,7 +86,7 @@ const worldReducer = (state = initialState, action: any) => {
   }
 
   // returns a reference to the object on newState with the map data
-  function getCurrentMap(stateObj) {
+  function getCurrentMap(stateObj: any) {
     if (stateObj.gameMode === 'story') {
       return stateObj.storyMaps[stateObj.currentMap];
     } else {

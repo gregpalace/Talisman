@@ -2,7 +2,7 @@ import * as types from '../../../constants/actionTypes';
 
 import { IState } from '../../../../typings/PlayerTypes';
 
-export function openChest() {
+export default function openChest() {
   return (dispatch: any, getState: () => IState) => {
     const { stats } = getState();
     const { level, expToNxtLevel } = stats;
