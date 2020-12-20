@@ -1,5 +1,5 @@
-import subject from '../../../src/client/reducers/mapReducer';
-import handleMovement from '../../../src/client/components/handleMovement';
+import subject from '../../../../src/client/reducers/map/mapReducer';
+import handleMovement from '../../../../src/client/components/handleMovement';
 
 describe('Map reducer tests', () => {
   let state: any;

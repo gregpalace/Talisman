@@ -1,5 +1,5 @@
-import subject from '../../../src/client/reducers/statsReducer';
-import { IStatsState } from '../../../src/typings/ReducerTypes';
+import subject from '../../../../src/client/reducers/stats/statsReducer';
+import { IStatsState } from '../../../../src/typings/ReducerTypes';
 
 describe('Stats reducer tests', () => {
   let state: IStatsState;

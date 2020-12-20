@@ -1,5 +1,5 @@
-import subject from '../../../src/client/reducers/dialogManagerReducer';
-import { IDialog } from '../../../src/typings/ReducerTypes';
+import subject from '../../../../src/client/reducers/dialogManager/dialogManagerReducer';
+import { IDialog } from '../../../../src/typings/ReducerTypes';
 
 describe('Dialog reducer tests', () => {
   let state: IDialog;

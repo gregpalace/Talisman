@@ -1,11 +1,11 @@
-import subject from '../../../src/client/reducers/inventoryReducer';
+import subject from '../../../../src/client/reducers/inventory/inventoryReducer';
 
-import HuntersCap from '../../../src/data/items/armor/hunters-cap';
-import LeatherArmor from '../../../src/data/items/armor/leather-armor';
-import LeatherBoots from '../../../src/data/items/armor/leather-boots';
+import HuntersCap from '../../../../src/data/items/armor/hunters-cap';
+import LeatherArmor from '../../../../src/data/items/armor/leather-armor';
+import LeatherBoots from '../../../../src/data/items/armor/leather-boots';
 import LeatherGloves from '.../../../src/data/items/armor/leather-gloves';
-import RustySword from '../../../src/data/items/weapons/rusty-sword';
-import { IInventoryState } from '../../../src/typings/ReducerTypes';
+import RustySword from '../../../../src/data/items/weapons/rusty-sword';
+import { IInventoryState } from '../../../../src/typings/ReducerTypes';
 
 describe('Inventory reducer tests', () => {
   let state: IInventoryState;

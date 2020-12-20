@@ -1,7 +1,7 @@
-import subject from '../../../src/client/reducers/playerReducer';
-import handleMovement from '../../../src/client/components/handleMovement';
+import subject from '../../../../src/client/reducers/player/playerReducer';
+import handleMovement from '../../../../src/client/components/handleMovement';
 import { types } from 'pg';
-import { IPlayerState } from '../../../src/typings/PlayerTypes';
+import { IPlayerState } from '../../../../src/typings/PlayerTypes';
 
 describe('Player reducer tests', () => {
   let state: IPlayerState;
