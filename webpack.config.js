@@ -61,5 +61,5 @@ module.exports = {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.css', '.scss'],
   },
 
-  plugins: [new BundleAnalyzerPlugin()],
+  // plugins: [new BundleAnalyzerPlugin()],
 };
