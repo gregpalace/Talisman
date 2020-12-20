@@ -42,6 +42,7 @@ export const SHOW_MONSTER = 'SHOW_MONSTER';
 export const HIDE_MONSTER = 'HIDE_MONSTER';
 
 // Dialog Store Actions
+export const OPEN_CHEST = 'OPEN_CHEST';
 export const SET_CHEST_DATA = 'SET_CHEST_DATA';
 export const OPEN_SETTINGS = 'OPEN_SETTINGS';
 export const CLOSE_SETTINGS = 'CLOSE_SETTINGS';
@@ -49,13 +50,15 @@ export const SET_STORY_MAP = 'SET_STORY_MAP';
 
 // Map Dimensions
 export const START_MAP = '1_1';
+export const SET_START_MAP = 'SET_START_MAP';
+export const MAP_TRANSITION = 'MAP_TRANSITION';
 export const MAP_WIDTH = SPRITE_SIZE * 10;
 export const MAP_HEIGHT = SPRITE_SIZE * 20;
 const TILE_HEIGHT = 15;
 const TILE_WIDTH = 20;
 export const MAP_DIMENSIONS = [TILE_WIDTH, TILE_HEIGHT]; // 20, 15
-// set the number of tiles to pad the map with (so the player cant see edge)
 export const MAP_PADDING_DISTANCE = 5;
+export const EXPLORE_TILES = 'EXPLORE_TILES';
 
 // Game Viewport
 export const GAME_VIEWPORT_SIZE = 350;
@@ -68,3 +71,4 @@ export const PAUSE = 'PAUSE';
 export const TIER_2 = 10;
 // set the duration for showing the snackbar (ms)
 export const SNACK_DURATION = 2500;
+export const TAKE_TURN = 'TAKE_TURN';

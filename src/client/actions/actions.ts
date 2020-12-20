@@ -38,43 +38,13 @@ export const setUpMaps = () => ({
   },
 });
 
-export const resetGameState = () => {
-  return (dispatch: any) => {
-    dispatch({
-      type: 'RESET',
-      payload: null,
-    });
-
-    dispatch({
-      type: 'PAUSE',
-      payload: {
-        pause: true,
-        gameStart: true,
-      },
-    });
-  };
-};
-
 export const backToSelect = () => {
   return (dispatch: any) => {
     dispatch({
-      type: 'PAUSE',
+      type: types.PAUSE,
       payload: {
         pause: true,
         gameStart: true,
-      },
-    });
-  };
-};
-
-export const startMainGame = () => {
-  return (dispatch: any, getState: any) => {
-    // this needs to happen before add tiles, explore tiles, or add monsters
-    dispatch({
-      type: 'SET_START_MAP',
-      payload: {
-        startMap: types.START_MAP,
-        gameMode: 'story',
       },
     });
   };
