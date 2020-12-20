@@ -1,18 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import ChestLoot from './dialogs/chest-loot/chest-loot';
-import EndlessGameStart from './dialogs/endless-game-start';
-import InventoryDialog from './dialogs/inventory-dialog';
-import GameInstructions from './dialogs/game-instructions';
-import GameTextDialog from './dialogs/game-text-dialog';
-import GameSelect from './dialogs/game-select';
-import GameWin from './dialogs/game-win';
-import GameOver from './dialogs/game-over';
-import MainGameStart from './dialogs/main-game-start';
-import SettingsDialog from './dialogs/settings-dialog';
-import ShopDialog from './dialogs/shop-dialog';
-import LevelUp from './dialogs/level-up';
+import ChestLoot from './dialogs/ChestLoot';
+import InventoryDialog from './dialogs/InventoryDialog';
+import GameInstructions from './dialogs/GameInstructions';
+import GameTextDialog from './dialogs/GameTextDialog';
+import GameWin from './dialogs/GameWin';
+import GameOver from './dialogs/GameOver';
+import MainGameStart from './dialogs/MainGameStart';
+import SettingsDialog from './dialogs/SettingsDialog';
+import ShopDialog from './dialogs/ShopDialog';
+import LevelUp from './dialogs/LevelUp';
 
 const DialogManager = ({ dialog }: any) => {
   const {
