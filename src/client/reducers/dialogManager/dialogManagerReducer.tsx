@@ -22,7 +22,7 @@ const initialState: IDialog = {
 
 const dialogManagerReducer = (state = initialState, action: any) => {
   switch (action.type) {
-    case 'PAUSE':
+    case types.PAUSE:
       const { shop, chest, gameStart, inventory, pause } = action.payload;
 
       return {
@@ -44,31 +44,35 @@ const dialogManagerReducer = (state = initialState, action: any) => {
       return { ...state, settings: false };
 
     case types.SET_STORY_MAP:
-      const { direction, currentMap, storyMaps } = action.payload;
-      const { stairs } = storyMaps[currentMap];
-
-      const nxtMap = stairs[direction];
-
-      const { message } = storyMaps[nxtMap];
-      // if the map has a message and player is going up, display message
-      if (message && direction === 'up') {
-        return {
-          ...state,
-          paused: true,
-          gameText: {
-            title: message.title,
-            body: message.body,
-          },
-        };
-      }
-
-      return state;
+      return setMap();
 
     case types.RESET:
       return initialState;
 
     default:
       return state;
+  }
+
+  // Extract Reducer Method:
+  function setMap() {
+    const { direction, currentMap, storyMaps } = action.payload;
+    const { stairs } = storyMaps[currentMap];
+
+    const nxtMap = stairs[direction];
+
+    const { message } = storyMaps[nxtMap];
+    // if the map has a message and player is going up, display message
+    if (message && direction === 'up') {
+      return {
+        ...state,
+        paused: true,
+        gameText: {
+          title: message.title,
+          body: message.body,
+        },
+      };
+    }
+    return state;
   }
 };
 

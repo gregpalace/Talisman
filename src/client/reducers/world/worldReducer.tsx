@@ -1,8 +1,6 @@
 import _cloneDeep from 'lodash.clonedeep';
 
-import attachMetaToTiles from '../../../utils/attach-meta-to-tiles';
-import generatePaddingTiles from '../../../utils/generate-padding';
-import maps from '../../../data/maps';
+import * as types from '../../constants/actionTypes';
 
 const initialState = {
   currentMap: null,
@@ -19,17 +17,17 @@ const worldReducer = (state = initialState, action: any) => {
   let currentMapData: any;
 
   switch (action.type) {
-    case 'MAP_TRANSITION':
+    case types.MAP_TRANSITION:
       return { ...state, mapTransition: !state.mapTransition };
 
-    case 'OPEN_CHEST':
+    case types.OPEN_CHEST:
       newState = _cloneDeep(state);
       currentMapData = getCurrentMap(newState);
       // set current chest to ground tile
       currentMapData.tiles[action.payload.y][action.payload.x].value = -2;
       return newState;
 
-    case 'EXPLORE_TILES':
+    case types.EXPLORE_TILES:
       newState = _cloneDeep(state);
 
       const { tiles, paddingTiles } = action.payload;
@@ -64,11 +62,11 @@ const worldReducer = (state = initialState, action: any) => {
 
       return newState;
 
-    case 'TAKE_TURN':
+    case types.TAKE_TURN:
       // increment the turn
       return { ...state, turn: state.turn + 1 };
 
-    case 'SET_START_MAP':
+    case types.SET_START_MAP:
       const { startMap, gameMode, floorNum } = action.payload;
 
       return {
@@ -78,7 +76,7 @@ const worldReducer = (state = initialState, action: any) => {
         floorNum: floorNum ? floorNum : state.floorNum,
       };
 
-    case 'RESET':
+    case types.RESET:
       return initialState;
 
     default:
