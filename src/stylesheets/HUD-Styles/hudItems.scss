@@ -5,22 +5,24 @@ $inventoryBorderRadius: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 
   position: relative;
-  top: 10%;
-  right: 20%;
+  right: 40%;
+
+  margin: 5px auto;
+  // border: 1px solid black;
+
   #inventory-button {
     height: 20px;
     width: 50%;
-
-    position: relative;
-    left: 10%;
 
     font-style: oblique;
     outline: none;
     background-color: transparent;
     border: $inventoryBorder;
     border-radius: $inventoryBorderRadius;
+    padding: 1px;
 
     margin-top: 5px;
     &:hover {
