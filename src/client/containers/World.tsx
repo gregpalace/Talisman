@@ -40,8 +40,8 @@ export const World = (props: IWorldProps) => {
     <div
       style={{
         position: 'relative',
-        width: '1000px',
-        height: '500px',
+        width: '800px',
+        height: '480px',
         margin: '20px auto',
       }}
     >

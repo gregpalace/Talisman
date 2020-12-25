@@ -38,13 +38,11 @@ const Map: React.FC<IMapProps> = ({ tiles }) => {
     <div
       style={{
         position: 'relative',
-        top: '0px',
-        right: '250px',
-        width: '1000px', // 800
-        height: '500px', // 480
+        right: '325px',
+        width: '800px', // 800
+        // height: '480px', // 480
         backgroundColor: 'green',
         border: '1px solid black',
-        margin: '10px auto',
       }}
     >
       {tiles.map((row: number[], index: number) => (

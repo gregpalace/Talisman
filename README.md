@@ -13,7 +13,8 @@ Talisman is an Open-Source RPG made with React and Redux. The game is a turn-bas
 
 - Lightweight React frontend with reusable UI components
 - State management using Redux to imploy a single source of truth for game state
-- Jest/Enzyme testing frameworks incorporated for code maintainability and reliability of components
+- Jest/Enzyme testing frameworks incorporated for code maintainability and reliability
+- Typescript encorporated to enforce strict, static typing of variables
 
 #
 

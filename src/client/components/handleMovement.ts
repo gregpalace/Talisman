@@ -48,15 +48,15 @@ export default function handleMovement(player: any) {
     );
   }
   // Able to walk through trees and rocks?
-  function observeImpassable(oldPos: number[] | any, newPos: number[] | any) {
-    const tiles = store.getState().map.tiles;
+  function observeImpassable(oldPos: number[], newPos: number[] | any) {
+    const tiles = store.getState().map.Map1;
     const y = newPos[1] / SPRITE_SIZE;
     const x = newPos[0] / SPRITE_SIZE;
     const nextTile = tiles[y][x];
     return nextTile < 5;
   }
 
-  function dispatchMove(direction: any, newPos: number[] | any) {
+  function dispatchMove(direction: string, newPos: number[] | any) {
     const walkIndex = getWalkIndex();
     store.dispatch({
       type: 'MOVE_PLAYER',
@@ -69,7 +69,7 @@ export default function handleMovement(player: any) {
     });
   }
 
-  function attemptMove(direction: string | any) {
+  function attemptMove(direction: string) {
     const oldPos = store.getState().player.position;
     const newPos = getNewPosition(oldPos, direction);
 
@@ -81,7 +81,7 @@ export default function handleMovement(player: any) {
     }
   }
 
-  function handleKeyDown(e: any) {
+  function handleKeyDown(e: KeyboardEvent) {
     e.preventDefault();
 
     switch (e.keyCode) {
@@ -98,7 +98,7 @@ export default function handleMovement(player: any) {
     }
   }
 
-  window.addEventListener('keydown', (e: Event) => {
+  window.addEventListener('keydown', (e: KeyboardEvent) => {
     handleKeyDown(e);
   });
 

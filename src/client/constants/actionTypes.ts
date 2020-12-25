@@ -2,8 +2,9 @@
 export const MAX_HP = 100;
 export const MAX_MP = 150;
 export const MAX_ITEMS = 6;
-export const SPRITE_SIZE = 50;
+export const SPRITE_SIZE = 40;
 export const INVENTORY_SLOTS = 6;
+
 // how fast the player move animation plays (ms)
 export const ANIMATION_SPEED = 350;
 

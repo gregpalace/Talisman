@@ -5,10 +5,10 @@ $inventoryBorderRadius: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
 
   position: relative;
-  right: 10%;
+  top: 10%;
+  right: 20%;
   #inventory-button {
     height: 20px;
     width: 50%;

@@ -1,10 +1,17 @@
 .tile {
   display: inline-flex;
-  // background-color: green;
 }
 
 .rock {
-  background-color: url('/src/assets/tiles/brick-wall-2.png');
+  background-image: url('/src/assets/tiles/brick-wall-1.png');
+}
+
+.mossy-rock {
+  background-image: url('/src/assets/tiles/brick-wall-2.png');
+}
+
+.dirt {
+  background-image: url('/src/assets/tiles/dirt.jpg');
 }
 
 .tree {
@@ -12,6 +19,14 @@
 }
 
 .grass {
+  background-color: green;
+}
+
+.water {
+  // background-color: aqua;
+  background-image: url('/src/assets/water.png');
+}
+
+.chest {
   background-image: url('/src/assets/tiles/chest.png');
-  background-repeat: no-repeat;
 }
