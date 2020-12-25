@@ -3,7 +3,7 @@ import React from 'react';
 import Flames from '../../assets/tiles/flames.png';
 import { FLAME_SIZE } from '../constants/actionTypes';
 
-import './styles.scss';
+import '../../stylesheets/HUD-Styles/flame.scss';
 
 const Flame = ({ children, position }: any) => {
   const top = position ? position[1] * FLAME_SIZE : 0;
