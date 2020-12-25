@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React unit tests <MainMenu /> should render correctly 1`] = `
+<div
+  className="main-menu"
+>
+  <header
+    className="heading"
+  >
+    <img
+      alt="Talisman"
+      id="game-logo"
+      src="../../assets/logo/logo.png"
+    />
+    <h1>
+      Talisman
+    </h1>
+  </header>
+  <br />
+  <main
+    className="menu-options"
+  >
+    <ul>
+      <li>
+        <a
+          href="/game"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+           
+          Start Game
+           
+        </a>
+      </li>
+      <li>
+        <a
+          href="/game"
+        >
+          Continue Game
+        </a>
+      </li>
+    </ul>
+  </main>
+</div>
+`;

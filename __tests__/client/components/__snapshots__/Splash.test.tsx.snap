@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React unit tests <Splash/> should render correctly 1`] = `
+<div
+  id="splash"
+>
+  <img
+    alt="Talisman"
+    id="splashLogo"
+    src="./assets/logo/logo.png"
+  />
+  <h1>
+    Talisman
+  </h1>
+  <LoadIcon />
+</div>
+`;
